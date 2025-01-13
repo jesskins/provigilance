@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['8000-jesskins-provigilance-b85n2n4cy2b.ws.codeinstitute-ide.ne
 'localhost',
 '127.0.0.1',
 '90.214.72.199',
+'*',
 ]
 
 
