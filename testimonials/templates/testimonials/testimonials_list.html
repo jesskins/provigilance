@@ -1,0 +1,19 @@
+<!-- testimonials/templates/testimonials/testimonials_list.html -->
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Testimonials</h1>
+<ul>
+    {% for testimonial in testimonials %}
+    <li>
+        <h2>{{ testimonial.name }}</h2>
+        <p>{{ testimonial.text }}</p>
+        <p>{{ testimonial.company }} - {{ testimonial.role }}</p>
+        <p>Service Date: {{ testimonial.service_month }} {{ testimonial.service_year }}</p>
+        {% if testimonial.image %}
+        <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}">
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'dips'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-jesskins-provigilance-b85n2n4cy2b.ws.codeinstitute-ide.net', '.herokuapp.com', 'https://provigilance-e9af1c567094.herokuapp.com/',
 'localhost',
