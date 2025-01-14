@@ -23,6 +23,6 @@ from testimonials import views as testimonials_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', about_views.home, name='about'),
-    path('', testimonials_views.index, name='index'),
+    path('testimonials/', testimonials_views.index, name='index'),
     path('', about_views.home, name='home'),
 ]
