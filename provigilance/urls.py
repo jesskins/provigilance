@@ -21,8 +21,8 @@ from about import views as about_views
 from testimonials import views as testimonials_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', about_views.home, name='home'),
     path('about/', about_views.home, name='about'),
     path('testimonials/', testimonials_views.index, name='testimonials'),
-    path('', about_views.home, name='home'),
+    path('admin/', admin.site.urls),
 ]
