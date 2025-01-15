@@ -1,5 +1,5 @@
-import sys
 from __future__ import print_function
+import sys
 import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
 from dotenv import load_dotenv 
