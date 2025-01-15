@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # class Post(models.Model):
 #    title = models.CharField(max_length=200, unique=True)
 
-class testimonial(models.Model):
+class Testimonial(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     company = models.CharField(max_length=200, blank=True, null=True)
