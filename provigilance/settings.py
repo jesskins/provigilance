@@ -39,6 +39,11 @@ ALLOWED_HOSTS = ['8000-jesskins-provigilance-b85n2n4cy2b.ws.codeinstitute-ide.ne
 '*',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-jesskins-provigilance-ixvw51b1ugb.ws.codeinstitute-ide.net',
+]
+
+
 
 # Application definition
 

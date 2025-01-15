@@ -24,5 +24,7 @@ urlpatterns = [
     path('', about_views.home, name='home'),
     path('about/', about_views.home, name='about'),
     path('testimonials/', testimonials_views.index, name='testimonials'),
+    path('testimonials/submit/', testimonials_views.submit_testimonial, name='submit_testimonial'),
+    path('testimonials/success/', testimonials_views.submit_success, name='submit_success'),
     path('admin/', admin.site.urls),
 ]
