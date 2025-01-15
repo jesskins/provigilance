@@ -8,7 +8,7 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
-# Check the number of arguments provided
+# Ensure the correct number of arguments
 if len(sys.argv) != 3:
     print("Usage: python send_email.py <recipient_email> <recipient_name>")
     sys.exit(1)
