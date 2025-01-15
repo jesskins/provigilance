@@ -15,6 +15,10 @@ from pathlib import Path
 #connect to env.py
 import os
 import dj_database_url
+from dotenv import load_dotenv
+
+load_dotenv()
+
 if os.path.isfile('env.py'):
     import env
 
@@ -134,8 +138,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'provigilancetestimonial@gmail.com'
-#EMAIL_HOST_PASSWORD = redacted lol
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 
 
