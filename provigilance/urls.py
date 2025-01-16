@@ -21,7 +21,7 @@ from about import views as about_views
 from testimonials import views as testimonials_views
 from django.conf import settings 
 from django.conf.urls.static import static 
-from django.conf.urls import handler404
+#from django.conf.urls import handler404
 
 urlpatterns = [
     path('', about_views.home, name='home'),
@@ -33,4 +33,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # Custom 404 handler 
 
-handler404 = 'about.views.custom_404'
+#handler404 = 'about.views.custom_404'
