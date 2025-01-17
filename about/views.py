@@ -1,8 +1,17 @@
 from django.shortcuts import render 
-from django.http import HttpResponse
+#from django.http import HttpResponse
+
+
+def about(request): 
+  return render(request, 'about.html')
 
 def home(request):
-    return HttpResponse("Hello, this is the about/home page")
+    return render(request, 'about.html')
+
+#def about(request):
+ #   return render(request, 'about.html')
+
 
 # def custom_404_view(request, exception):
   #  return render(request, '404.html', status=404)
+
