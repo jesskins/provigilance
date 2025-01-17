@@ -41,7 +41,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 SECRET_KEY = 'dips'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-jesskins-provigilance-b85n2n4cy2b.ws.codeinstitute-ide.net', '.herokuapp.com', 'https://provigilance-e9af1c567094.herokuapp.com/',
 'localhost',
