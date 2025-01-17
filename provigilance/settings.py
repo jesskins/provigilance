@@ -68,6 +68,8 @@ INSTALLED_APPS = [
     'oauth2_provider',
     'about',
     'testimonials',
+    'contact',
+    'book',
 ]
 
 AUTHENTICATION_BACKENDS = [ 
