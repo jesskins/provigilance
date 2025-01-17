@@ -61,13 +61,16 @@ footer {
 }
 
 /* Collapsible search bar to make less clunky */
+
 .search-bar {
     display: none;
 }
 
-.search-icon i {
+.search-icon {
     cursor: pointer;
     color: white;
     font-size: 110%;
 }
+
+
 
