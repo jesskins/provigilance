@@ -65,8 +65,9 @@ footer {
     display: none;
 }
 
-.search-icon {
+.search-icon i {
     cursor: pointer;
     color: white;
+    font-size: 110%;
 }
 
