@@ -19,6 +19,8 @@ from django.urls import path, include
 #from about.views import home
 from about import views as about_views
 from testimonials import views as testimonials_views
+from book import views as book_views
+from contact import views as contact_views
 from django.conf import settings 
 from django.conf.urls.static import static 
 #from django.conf.urls import handler404
@@ -30,6 +32,8 @@ urlpatterns = [
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     path('testimonials/submit/', testimonials_views.submit_testimonial, name='submit_testimonial'),
     path('testimonials/success/', testimonials_views.submit_success, name='submit_success'),
+    path('contact/', contact_views.index, name='contact_index'),
+    path('book/', book_views.index, name='book_index'),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # Custom 404 handler 
 
