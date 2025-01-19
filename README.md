@@ -12,11 +12,9 @@ Click to see the deployed site here!
 <a id="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![License][license-shield]][license-url]
+[![Contributors][contributors-shield]](https://github.com/jesskins/provigilance/graphs/contributors)
+[![Issues][issues-shield]](https://github.com/jesskins/provigilance/issues)
+[![License][license-shield]](https://github.com/jesskins/provigilance/blob/main/license.txt)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/jessbhowkins)
 
 <!-- PROJECT LOGO -->
@@ -29,12 +27,12 @@ Click to see the deployed site here!
   <h3 align="center">Provigilance</h3>
 
   <p align="center">
-    A revolutionary application to ensure your data's safety!
+    A webpage for the pre-existing buisness, to enhance business aquesition and promote new client sign-ups. 
     <br />
-    <a href="https://github.com/your_username/provigilance"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jesskins/provigilance"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/your_username/provigilance">View Demo</a>
+    <a href="https://github.com/your_username/provigilance">View Demo - if time set up </a>
     &middot;
     <a href="https://github.com/your_username/provigilance/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
@@ -91,14 +89,19 @@ We'll keep adding more features to meet your evolving needs. Feel free to sugges
 ### Built With
 
 This section lists the major frameworks/libraries used to build Provigilance. Here are a few examples:
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+### Built With
+
+This section lists the major frameworks/libraries used to build Provigilance:
+
+* [![Django][Django]](https://www.djangoproject.com/) - A high-level Python web framework
+* [![Django OAuth Toolkit][Django-OAuth-Toolkit]](https://django-oauth-toolkit.readthedocs.io/en/latest/) - OAuth2 provider implementation for Django
+* [![Gunicorn][Gunicorn]](https://gunicorn.org/) - Python WSGI HTTP Server for UNIX
+* [![Pillow][Pillow]](https://python-pillow.github.io/) - Python Imaging Library (Fork)
+* [![psycopg2][psycopg2]](https://www.psycopg.org/) - PostgreSQL adapter for Python
+* [![python-dotenv][python-dotenv]](https://saurabh-kumar.com/python-dotenv/) - Manage environment variables
+* [![Whitenoise][Whitenoise]](http://whitenoise.evans.io/en/stable/) - Serve static files directly from your Python web app
+* [![Google Auth][Google-Auth]](https://google-auth.readthedocs.io/en/latest/) - Google's library for using OAuth 2.0 and OpenID Connect
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
