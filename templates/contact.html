@@ -1,8 +1,21 @@
 {% extends 'base_generic.html' %}
+{% load static %}
 
 {% block title %}Contact{% endblock %}
 
 {% block content %}
-<h1>Contact Information</h1>
-<p>Here are some infos</p>
+<div class="contact-container">
+    <h1>Contact Information</h1>
+    <div class="contact-details">
+        <p><strong>Phone:</strong> 01980 1234 567890</p>
+        <p><strong>Email:</strong> <a href="mailto:mhowkins@provigilance.co.uk">mhowkins@provigilance.co.uk </a></p>
+        <p><strong>Mobile:</strong> +44 9876 543210</p>
+        <p><strong>General Working Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM (GMT)</p>
+        <p><em>Please note: We are able to work outside of these hours relative to your own timezone.</em></p>
+        <p><strong>Approximate Response Time:</strong> We will endevour to get back to you within 24 working hours</p>
+    </div>
+    <div class="cta-button">
+        <button onclick="requestCallBack()">Request Call Back</button>
+    </div>
+</div>
 {% endblock %}
