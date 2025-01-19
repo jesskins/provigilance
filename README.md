@@ -161,6 +161,115 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## Documentation
+
+### Document the UX Design Process
+
+**Wireframes, Mockups, and Diagrams:**
+- Include images or links to your wireframes, mockups, and diagrams here.
+  
+  ![Wireframe Example](path/to/wireframe.png)
+  ![Mockup Example](path/to/mockup.png)
+  ![Diagram Example](path/to/diagram.png)
+
+**Reasoning for Changes:**
+- **Initial Concept:** 
+  - Explain the initial idea and vision for the project.
+- **Feedback and Revisions:**
+  - Document any feedback received and changes made based on that feedback.
+- **Final Design:**
+  - Provide a summary of the final design and why certain decisions were made.
+
+
+**UX Process:**
+- Detail the steps taken during the UX design process.
+  - Research and analysis.
+  - User Stories: User personas and scenarios.
+  - Wireframing and prototyping.
+  - Usability testing and iterations.
+
+### Research 
+
+
+### User Stories
+[Link To Project Board](https://github.com/users/jesskins/projects/7)
+
+**Design Rationale:**
+- Explain the design decisions made throughout the project.
+  - Choice of color scheme, typography, and layout.
+  - Interaction and navigation design.
+  - Accessibility considerations.
+
+**Final Implementation:**
+- Describe the final implementation of the project.
+  - Key features and functionalities.
+  - How the design is brought to life in the final product.
+  - Any technical constraints or challenges overcome.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Testing and Validation 
+
+### Automated Tests
+
+Include details about automated testing here.
+
+- **Unit Tests:**
+  - Describe the unit tests you've implemented.
+  - ![Unit Test Screenshot](path/to/unit-test-screenshot.png)
+- **Integration Tests:**
+  - Describe the integration tests you've implemented.
+  - ![Integration Test Screenshot](path/to/integration-test-screenshot.png)
+
+### Manual Testing
+
+Outline the manual testing processes and results.
+
+- **User Testing:**
+  - Describe the user testing methods.
+  - Provide screenshots of user testing results.
+  - ![User Testing Screenshot](path/to/user-testing-screenshot.png)
+
+### Validation
+
+Provide links to validation tools used.
+
+- **HTML Validation:**
+  - [W3C Markup Validation Service](https://validator.w3.org/)
+- **CSS Validation:**
+  - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+- **Accessibility Validation:**
+  - [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/)
+  - [Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+
+### Language-Specific Validation
+
+#### Python
+- **Linting and Formatting:**
+  - Tools used: flake8, black
+  - Command: `flake8 . && black .`
+  - ![Python Linting Screenshot](path/to/python-linting-screenshot.png)
+
+#### JavaScript
+- **Linting and Formatting:**
+  - Tools used: ESLint, Prettier
+  - Command: `eslint . && prettier --write .`
+  - ![JavaScript Linting Screenshot](path/to/javascript-linting-screenshot.png)
+
+### Design Elements
+
+#### Color Contrast
+- Provide information about color contrast checks.
+- ![Color Contrast Screenshot](path/to/color-contrast-screenshot.png)
+
+### Browser Compatibility
+- List of browsers and versions tested.
+- ![Browser Compatibility Screenshot](path/to/browser-compatibility-screenshot.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -175,15 +284,6 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-### Top contributors:
-
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
-</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
