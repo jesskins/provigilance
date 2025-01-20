@@ -274,3 +274,96 @@ body.dark-mode .footer-content {
 .cta-button button:hover {
     background-color: #0056b3;
 }
+
+
+/* FORMS.PY CSS STYLING */
+
+/* Center the form and style the container */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Validation styles */
+input:valid, select:valid, textarea:valid {
+    border-color: #28a745;
+}
+
+input:invalid, select:invalid, textarea:invalid {
+    border-color: #dc3545;
+}
+
+
+/* clear button css //
+
+/* Form styles */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#clear-form {
+    background-color: transparent;
+    color: #007bff;
+    font-size: 24px;
+    padding: 10px;
+}
+
+#clear-form:hover {
+    color: #0056b3;
+}
