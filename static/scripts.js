@@ -79,5 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
             input.classList.remove('valid');
             input.value = '';
         });
+// Additional method to ensure all inputs are cleared 
+    form.querySelectorAll('input').forEach(input => input.value = ''); 
+    form.querySelectorAll('textarea').forEach(textarea => textarea.value = ''); 
+    form.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
+
     });
 });
