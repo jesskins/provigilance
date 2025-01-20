@@ -18,16 +18,6 @@ main {
     background-color: #ffffff;
 }
 
-/* Footer styles */
-footer {
-    padding: 10px;
-    background-color: #f8f9fa;
-    text-align: center;
-    border-top: 1px solid #e5e5e5;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
 
 /* Custom navbar styles */
 .navbar {
@@ -73,4 +63,195 @@ footer {
 }
 
 
+/* Footer styles */
+/* .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
 
+.social-links {
+    margin: 10px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-buttons {
+    margin-top: 10px;
+}
+
+.footer-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle-theme {
+    background-color: #007bff;
+    color: white;
+}
+
+#toggle-theme:hover {
+    background-color: #0056b3;
+}
+
+#back-to-top {
+    background-color: #28a745;
+    color: white;
+}
+
+#back-to-top:hover {
+    background-color: #1e7e34;
+} */
+
+/* Footer styles */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #343a40;
+    text-align: center;
+    width: 100%;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.footer-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.footer-buttons button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#toggle-theme {
+    background-color: #ffffff;
+    color: #3f3f3f;
+}
+
+#toggle-theme:hover {
+    background-color: #3f3f3f;
+    color: #ffffff
+}
+
+#back-to-top {
+    background-color: white;
+    color: blue;
+}
+
+#back-to-top:hover {
+    background-color: #007bff;
+    color: #ffffff
+
+}
+
+/* Footer bottom section styles */
+.footer-bottom {
+    background-color: #ffffff;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    width: 100%;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #6c757d;
+}
+
+
+.footer-bottom-buis {
+    align-items: left;
+}
+
+.footer-bottom-dev {
+    align-items: right;
+}
+
+.footer-bottom a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom i {
+    margin-left: 5px;
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .footer-content {
+    background-color: #444;
+}
+
+
+/* Contact page styles */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+.cta-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cta-button button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button button:hover {
+    background-color: #0056b3;
+}
