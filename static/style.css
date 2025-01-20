@@ -23,20 +23,18 @@ main {
     padding: 20px;
     background-color: #ffffff;
 }
-/* to ensure no overlay of footer */
 
-.main-content { 
-    min-height: 100%; 
-    display: flex; 
-    flex-direction: column; 
+/* To ensure no overlay of footer */
+.main-content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.content { 
-    flex: 1; 
-    padding-bottom: 60px; 
-    /* Space for the footer */
+.content {
+    flex: 1;
+    padding-bottom: 60px; /* Space for the footer */
 }
-
 
 /* Custom navbar styles */
 .navbar {
@@ -70,7 +68,6 @@ main {
 }
 
 /* Collapsible search bar to make less clunky */
-
 .search-bar {
     display: none;
 }
@@ -80,57 +77,6 @@ main {
     color: white;
     font-size: 110%;
 }
-
-
-/* Footer styles */
-/* .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f1f1f1;
-    text-align: center;
-}
-
-.social-links {
-    margin: 10px 0;
-}
-
-.social-links a {
-    margin: 0 10px;
-    color: #000;
-    text-decoration: none;
-}
-
-.footer-buttons {
-    margin-top: 10px;
-}
-
-.footer-buttons button {
-    margin: 5px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#toggle-theme {
-    background-color: #007bff;
-    color: white;
-}
-
-#toggle-theme:hover {
-    background-color: #0056b3;
-}
-
-#back-to-top {
-    background-color: #28a745;
-    color: white;
-}
-
-#back-to-top:hover {
-    background-color: #1e7e34;
-} */
 
 /* Footer styles */
 .footer-main {
@@ -180,7 +126,7 @@ main {
 
 #toggle-theme:hover {
     background-color: #3f3f3f;
-    color: #ffffff
+    color: #ffffff;
 }
 
 #back-to-top {
@@ -190,8 +136,7 @@ main {
 
 #back-to-top:hover {
     background-color: #007bff;
-    color: #ffffff
-
+    color: #ffffff;
 }
 
 /* Footer bottom section styles */
@@ -208,7 +153,6 @@ main {
     margin: 0;
     color: #6c757d;
 }
-
 
 .footer-bottom-buis {
     align-items: left;
@@ -231,7 +175,6 @@ main {
     margin-left: 5px;
 }
 
-
 /* Dark mode styles */
 body.dark-mode {
     background-color: #333;
@@ -241,7 +184,6 @@ body.dark-mode {
 body.dark-mode .footer-content {
     background-color: #444;
 }
-
 
 /* Contact page styles */
 .contact-container {
@@ -274,7 +216,6 @@ body.dark-mode .footer-content {
 .cta-button button:hover {
     background-color: #0056b3;
 }
-
 
 /* FORMS.PY CSS STYLING */
 
@@ -333,10 +274,7 @@ input:invalid, select:invalid, textarea:invalid {
     border-color: #dc3545;
 }
 
-
-/* clear button css //
-
-/* Form styles */
+/* Clear button CSS */
 .form-actions {
     display: flex;
     justify-content: space-between;
@@ -344,26 +282,21 @@ input:invalid, select:invalid, textarea:invalid {
     margin-top: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
 #clear-form {
     background-color: transparent;
     color: #007bff;
     font-size: 24px;
     padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: normal; /* Ensure default weight is normal */
 }
 
 #clear-form:hover {
     color: #0056b3;
+}
+
+#clear-form.clicked {
+    font-weight: bold;
+    color: #003366; /* Darker color */
 }

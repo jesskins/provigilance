@@ -60,19 +60,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener for the clear form button
     clearFormButton.addEventListener('click', function() {
+        clearFormButton.classList.add('clicked');
+
         // Reset the form
         form.reset();
 
         // Clear validation styles and input values
         inputs.forEach(input => {
             input.classList.remove('valid');
-            if (input.type !== 'file') { // Skip file inputs
+            if (input.type !== 'file') {
                 input.value = '';
             }
         });
 
         // Reset select fields
         form.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
+
+        // Remove the 'clicked' class after animation ends
+        setTimeout(() => {
+            clearFormButton.classList.remove('clicked');
+        }, 500); // Adjust duration if needed
     });
 });
-
