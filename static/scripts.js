@@ -36,33 +36,18 @@ document.getElementById('toggle-theme').addEventListener('click', function() {
 });
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ 
+        top: 0, behavior: 'smooth' 
+
+    });
 }
 
-// function for form responsive design and data validation //
-
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('testimonial-form');
-    const inputs = form.querySelectorAll('input, select, textarea');
-
-    inputs.forEach(input => {
-        input.addEventListener('input', function() {
-            if (input.checkValidity()) {
-                input.classList.add('valid');
-            } else {
-                input.classList.remove('valid');
-            }
-        });
-    });
-});
-
-
-/* clear form javascript */
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('testimonial-form');
     const inputs = form.querySelectorAll('input, select, textarea');
     const clearFormButton = document.getElementById('clear-form');
 
+    // Add event listener for form inputs to validate fields
     inputs.forEach(input => {
         input.addEventListener('input', function() {
             if (input.checkValidity()) {
@@ -73,16 +58,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Add event listener for the clear form button
     clearFormButton.addEventListener('click', function() {
+        // Reset the form
         form.reset();
+
+        // Clear validation styles and input values
         inputs.forEach(input => {
             input.classList.remove('valid');
-            input.value = '';
+            if (input.type !== 'file') { // Skip file inputs
+                input.value = '';
+            }
         });
-// Additional method to ensure all inputs are cleared 
-    form.querySelectorAll('input').forEach(input => input.value = ''); 
-    form.querySelectorAll('textarea').forEach(textarea => textarea.value = ''); 
-    form.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
 
+        // Reset select fields
+        form.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
     });
 });
+

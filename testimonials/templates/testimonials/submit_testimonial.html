@@ -1,23 +1,20 @@
-{% extends "base_generic.html" %}
+{% extends 'base_generic.html' %}
 {% load static %}
 
+{% block title %}Submit Testimonial{% endblock %}
+
 {% block content %}
+<h1>Submit Testimonial</h1>
 <div class="form-container">
-    <h1>Submit a Testimonial</h1>
-    <form method="post" enctype="multipart/form-data">
+    <form method="post" action="{% url 'submit_testimonial' %}" enctype="multipart/form-data" id="testimonial-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="button" id="clear-form" title="Clear Form"> 
-                <i class="fas fa-sync-alt"></i> 
+        <div class="form-actions">
+            <button type="submit">Submit</button>
+            <button type="button" id="clear-form" title="Clear Form">
+                <i class="fas fa-sync-alt"></i>
             </button>
         </div>
     </form>
 </div>
 {% endblock %}
-
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'forms.css' %}">
-{% endblock %}
-
