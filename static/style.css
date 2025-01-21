@@ -38,7 +38,7 @@ main {
 
 /* Custom navbar styles */
 .navbar {
-    background-color: #343a40;
+    background-color: #696d7d;
 }
 
 .navbar .navbar-brand {
@@ -59,12 +59,12 @@ main {
 
 /* Offcanvas styles */
 .offcanvas-header {
-    background-color: #343a40;
+    background-color: #696d7d;
     color: #ffffff;
 }
 
 .offcanvas-body {
-    background-color: #ffffff;
+    background-color: #dbe9ee;
 }
 
 /* Collapsible search bar to make less clunky */
@@ -84,7 +84,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #343a40;
+    background-color: #696d7d;
     text-align: center;
     width: 100%;
 }
@@ -94,11 +94,15 @@ main {
     align-items: center;
 }
 
+.footer-text {
+    color: #ffffff
+}
+
 .social-links a {
     margin: 0 10px;
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 26px;
 }
 
 .social-links a:hover {
@@ -131,7 +135,7 @@ main {
 
 #back-to-top {
     background-color: white;
-    color: blue;
+    color: #006ADB;
 }
 
 #back-to-top:hover {
@@ -163,7 +167,7 @@ main {
 }
 
 .footer-bottom a {
-    color: #007bff;
+    color: #006ADB;
     text-decoration: none;
 }
 

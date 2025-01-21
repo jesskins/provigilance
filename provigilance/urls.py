@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 #from about.views import home
 from about import views as about_views
 from testimonials import views as testimonials_views
@@ -34,6 +35,7 @@ urlpatterns = [
     path('testimonials/success/', testimonials_views.submit_success, name='submit_success'),
     path('contact/', contact_views.index, name='contact'),
     path('book/', book_views.index, name='book'),
+    path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
     path('admin/', admin.site.urls),
 ] # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # Custom 404 handler 
 
