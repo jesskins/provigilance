@@ -168,7 +168,8 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 **Wireframes, Mockups, and Diagrams:**
 - Include images or links to your wireframes, mockups, and diagrams here.
   
-  ![Wireframe Example](path/to/wireframe.png)
+  ![Desktop Wireframe](assets/readme/wf_desktop.png)
+  ![Mobile Wireframe](assets/readme/wf_mobile.png)
   ![Mockup Example](path/to/mockup.png)
   ![Diagram Example](path/to/diagram.png)
 
@@ -194,8 +195,13 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 ### User Stories
 [Link To Project Board](https://github.com/users/jesskins/projects/7)
 
-User stories were created with the assistance of AI in initial generation, they were then ammended and edited to align with the project goals and values relevant for this project. 
+#### AI Reflection:
+
+User stories were created with the assistance of AI in initial generation, they were then ammended and edited to align with the project goals and values relevant for this project. For this project, AI had a difficult time understanding the project scope, as the buisness goals are outside of a classic "QA Audit", therefore AI's continubution was excellent for the more generic user stories, but lacking to assist with industry specific. 
+
+#### Additional labels 
 The classic "must", "should" and "could" labels were utilised for organisation. To help prevent wasted time on less important issues, the label "design bug" was also used for areas where the design was not meeting expectation, but should not affect MVP (i.e., low priority).
+Following the design plan, I intended to only work on the "coulds" once the MVP was met (Musts), while monitoring if some had been completed serentipitously. 
 
 **Design Rationale:**
 - Explain the design decisions made throughout the project.
