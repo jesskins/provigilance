@@ -89,8 +89,18 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     
-    // Fetch events from the data attribute
-    var events = JSON.parse(document.getElementById('calendar').dataset.events);
+    // Fetch events from the data attribute and handle empty JSON cases
+    var eventsData = document.getElementById('calendar').dataset.events;
+    var events;
+
+    try {
+        events = JSON.parse(eventsData);
+    } catch (e) {
+        events = [];
+        console.error('Invalid JSON data for events:', e);
+    }
+
+    console.log('Events:', events);
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
