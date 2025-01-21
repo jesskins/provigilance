@@ -166,7 +166,10 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 ### Document the UX Design Process
 
 **Wireframes, Mockups, and Diagrams:**
-- Include images or links to your wireframes, mockups, and diagrams here.
+
+#### Wireframes
+
+Wireframes were created in Balsamiq to give an approximate idea for the design and features to include. In this project, one of the goals is to meet a more flexible and dynamic working style, and avoid the tendancy to fixate on a specific element which is untimately not that valuable to the MVP. Therefore the wireframes were to serve as a guide, rather than a strict instruction. 
   
   ![Desktop Wireframe](assets/readme/wf_desktop.png)
   ![Mobile Wireframe](assets/readme/wf_mobile.png)
@@ -214,6 +217,17 @@ Following the design plan, I intended to only work on the "coulds" once the MVP 
   - Key features and functionalities.
   - How the design is brought to life in the final product.
   - Any technical constraints or challenges overcome.
+
+
+### Key Features 
+
+#### Pages
+
+Book
+
+The booking page is ideally going to serve as a request appointment form, to display to potential clients availability over the coming 12 months. Utimately, being able to directly book from the website is impractical, as due to the service type extensive communication is required to work out the correct package required for the client. 
+In the interest of passing the CRUD functionality for the assessment, this has been adapted into a more typical booking system with the intention of being drawn back at a later release. 
+Instruction from [dev genius](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78) was utilised to create this page. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -325,6 +339,7 @@ Use this space to list resources you find helpful and would like to give credit 
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
+* [Dev Genius Calendar Iplementation](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
