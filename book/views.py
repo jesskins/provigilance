@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import TimeSlot
 
+def index(request):
+    return render(request, 'book.html')
+
 def calendar_view(request):
     timeslots = TimeSlot.objects.all()
     events = []

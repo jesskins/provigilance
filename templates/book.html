@@ -1,13 +1,16 @@
 {% extends 'base_generic.html' %}
+{% load static %}
 
 <head>
     <!-- FullCalendar CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css" rel="stylesheet">
 </head>
 
-{% block title %}Booking Calendar{% endblock %}
+{% block title %}Booking{% endblock %}
 
 {% block content %}
+<h1>Booking</h1>
+<p>Please see this calendar for availability information:</p>
 <div id="calendar" data-events='{{ events|safe }}'></div>
 {% endblock %}
 
