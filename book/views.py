@@ -1,7 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import TimeSlot
 
-# Create your views here.
+def calendar_view(request):
+    timeslots = TimeSlot.objects.all()
+    events = []
 
-def index(request):
-    return render(request, 'book.html')
+    for slot in timeslots:
+        color = 'green' if slot.is_available else 'red'
+        events.append({
+            'title': slot.get_slot_type_display(),
+            'start': slot.day.isoformat(),
+            'color': color
+        })
+
+    return render(request, 'book.html', {'events': events})

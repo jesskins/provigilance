@@ -82,3 +82,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500); // Adjust duration if needed
     });
 });
+
+
+// for the calendar of booking page //
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    
+    // Fetch events from the data attribute
+    var events = JSON.parse(document.getElementById('calendar').dataset.events);
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: events,
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        selectable: true,
+        selectHelper: true
+    });
+
+    calendar.render();
+});
