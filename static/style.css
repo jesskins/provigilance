@@ -304,3 +304,35 @@ input:invalid, select:invalid, textarea:invalid {
     font-weight: bold;
     color: #003366; /* Darker color */
 }
+
+
+/* PRIVACY POLICY STUFF */
+/* Privacy Policy Styles */
+.privacy-policy {
+    font-size: 14px; /* Small text size */
+    line-height: 1.6; /* Good line spacing for readability */
+    margin: 20px auto; /* Center the content */
+    max-width: 800px; /* Limit the width for better readability */
+    padding: 20px; /* Add padding */
+}
+
+.privacy-policy h1, 
+.privacy-policy h2, 
+.privacy-policy h3 {
+    margin-top: 20px; /* Add spacing above headings */
+    margin-bottom: 10px; /* Add spacing below headings */
+    font-weight: bold; /* Make headings bold */
+}
+
+.privacy-policy p {
+    margin-bottom: 15px; /* Add spacing between paragraphs */
+}
+
+.privacy-policy ul {
+    padding-left: 20px; /* Indent the list */
+    margin-bottom: 20px; /* Add spacing below the list */
+}
+
+.privacy-policy ul li {
+    margin-bottom: 10px; /* Add spacing between list items */
+}
