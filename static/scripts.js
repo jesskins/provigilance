@@ -8,26 +8,9 @@ function toggleSearch() {
     }
 }
 
-
 // Function to handle the request call back button
 function requestCallBack() {
     window.location.href = "/request-callback/";
-}
-
-
-// Function to handle the request call back button
-function requestCallBack() {
-    window.location.href = "/request-callback/";
-}
-
-// Existing function
-function toggleSearch() {
-    const searchBar = document.getElementById('searchBar');
-    if (searchBar.style.display === 'none' || searchBar.style.display === '') {
-        searchBar.style.display = 'block';
-    } else {
-        searchBar.style.display = 'none';
-    }
 }
 
 // New functions for the footer
@@ -38,7 +21,6 @@ document.getElementById('toggle-theme').addEventListener('click', function() {
 function scrollToTop() {
     window.scrollTo({ 
         top: 0, behavior: 'smooth' 
-
     });
 }
 
@@ -83,18 +65,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 // for the calendar of booking page //
 
-document.addEventListener('DOMContentLoaded', function() {
+// Import FullCalendar and necessary plugins
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
+
+// Function to initialize the calendar
+function initializeCalendar() {
     var calendarEl = document.getElementById('calendar');
-    
+
+    if (!calendarEl) {
+        console.error('Calendar element not found');
+        return;
+    }
+
     // Fetch events from the data attribute and handle empty JSON cases
-    var eventsData = document.getElementById('calendar').dataset.events;
+    var eventsData = calendarEl.dataset.events;
     var events;
 
     try {
         events = JSON.parse(eventsData);
+        if (!events) {
+            throw new Error("Events data is null or empty");
+        }
     } catch (e) {
         events = [];
         console.error('Invalid JSON data for events:', e);
@@ -102,17 +97,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('Events:', events);
 
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        events: events,
-        headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        selectable: true,
-        selectHelper: true
-    });
+    if (typeof Calendar !== 'undefined') {
+        var calendar = new Calendar(calendarEl, {
+            plugins: [dayGridPlugin, interactionPlugin],
+            initialView: 'dayGridMonth',
+            events: events,
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            selectable: true,
+            selectHelper: true
+        });
 
-    calendar.render();
-});
+        calendar.render();
+    } else {
+        console.error('FullCalendar is not defined');
+    }
+}
+
+// Call the function to initialize the calendar after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initializeCalendar);
