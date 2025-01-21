@@ -194,6 +194,9 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 ### User Stories
 [Link To Project Board](https://github.com/users/jesskins/projects/7)
 
+User stories were created with the assistance of AI in initial generation, they were then ammended and edited to align with the project goals and values relevant for this project. 
+The classic "must", "should" and "could" labels were utilised for organisation. To help prevent wasted time on less important issues, the label "design bug" was also used for areas where the design was not meeting expectation, but should not affect MVP (i.e., low priority).
+
 **Design Rationale:**
 - Explain the design decisions made throughout the project.
   - Choice of color scheme, typography, and layout.
