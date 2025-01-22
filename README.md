@@ -212,6 +212,12 @@ Following the design plan, I intended to only work on the "coulds" once the MVP 
   - Interaction and navigation design.
   - Accessibility considerations.
 
+
+Strategic concessions and resouce allocations 
+
+- Footer TrustPilot button - as trustpilot require a buisness accound with them to use their widgets a tempoary button was created as a filler, which will be updated to one of their widgets with the next update. 
+Copilot was especially helpful to match the chosen font to trustpilot's brand font, saved many many minutes. 
+
 **Final Implementation:**
 - Describe the final implementation of the project.
   - Key features and functionalities.

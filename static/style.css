@@ -273,14 +273,17 @@ body.dark-mode .footer-content {
 form {
     display: flex;
     flex-direction: column;
+    gap: 15px; /* Spacing between form fields */
 }
 
 .form-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 15px;
 }
 
 label {
-    display: block;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
@@ -299,6 +302,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -339,6 +343,17 @@ input:invalid, select:invalid, textarea:invalid {
 #clear-form.clicked {
     font-weight: bold;
     color: #003366; /* Darker color */
+}
+
+/* Radio buttons for the recommendation question */
+.recommend-radio {
+    display: flex;
+    gap: 10px; /* Spacing between radio buttons */
+    align-items: center;
+}
+
+.recommend-radio input {
+    margin-right: 5px;
 }
 
 

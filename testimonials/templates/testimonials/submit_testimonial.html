@@ -8,7 +8,9 @@
 <div class="form-container">
     <form method="post" action="{% url 'submit_testimonial' %}" enctype="multipart/form-data" id="testimonial-form">
         {% csrf_token %}
+        <!-- Existing form fields rendered -->
         {{ form.as_p }}
+    
         <div class="form-actions">
             <button type="submit">Submit</button>
             <button type="button" id="clear-form" title="Clear Form">
