@@ -30,3 +30,9 @@ class Migration(migrations.Migration):
             ],
         ),
     ]
+
+migrations.AddField(
+    model_name='testimonial',
+    name='recommend',
+    field=models.CharField(choices=[('yes', 'Yes'), ('no', 'No')], max_length=3),
+),

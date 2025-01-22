@@ -5,70 +5,31 @@
 
 {% block content %}
 <h1>Testimonials</h1>
-<div id="testimonials-container" class="testimonials"></div>
+<div id="testimonials-container" class="testimonials">
+    {% for testimonial in testimonials %}
+        <div class="testimonial{% if forloop.counter0|divisibleby:2 %} reverse{% endif %}">
+            {% if testimonial.image %}
+                <img src="{{ testimonial.image.url }}" alt="{{ testimonial.company }}" class="testimonial-img">
+            {% endif %}
+            <div class="testimonial-content">
+                <p>{{ testimonial.text }} - {{ testimonial.service_month }} {{ testimonial.service_year }}</p>
+                <p>{{ testimonial.name.split|first }} at</p>
+                <h3>{{ testimonial.company }}</h3>
+                <div class="recommendation">
+                    {% if testimonial.recommend == 'yes' %}
+                        &#10003; Would recommend
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
 <div class="arrow" onclick="showMoreTestimonials()">></div>
 
 <script>
-// Your JavaScript code here
-const testimonialsData = [
-  {
-    "company": "Company 1",
-    "image": "assets/images/profiles/company1.png",
-    "review": "Great service! Would definitely recommend.",
-    "date": "January 2023",
-    "recommend": true
-  },
-  {
-    "company": "Company 2",
-    "image": "assets/images/profiles/company2.png",
-    "review": "Excellent experience. Highly professional.",
-    "date": "March 2022",
-    "recommend": true
-  }
-];
-
-let currentIndex = 0;
-const testimonialsPerPage = 3;
-
-function displayTestimonials() {
-  console.log("Displaying testimonials");
-  const container = document.getElementById('testimonials-container');
-  container.innerHTML = '';
-
-  for (let i = currentIndex; i < Math.min(currentIndex + testimonialsPerPage, testimonialsData.length); i++) {
-    const testimonial = testimonialsData[i];
-    console.log("Testimonial:", testimonial);
-    const testimonialDiv = document.createElement('div');
-    testimonialDiv.className = 'testimonial';
-    
-    testimonialDiv.innerHTML = `
-      <img src="${testimonial.image}" alt="${testimonial.company}" class="testimonial-img">
-      <div class="testimonial-content">
-        <h3>${testimonial.company}</h3>
-        <p>"${testimonial.review}" - ${testimonial.date}</p>
-        <div class="recommendation">${testimonial.recommend ? '&#10003; Would recommend' : ''}</div>
-      </div>
-    `;
-
-    if (i % 2 === 1) {
-      testimonialDiv.classList.add('reverse');
-    }
-
-    container.appendChild(testimonialDiv);
-  }
-}
-
 function showMoreTestimonials() {
-  console.log("Showing more testimonials");
-  currentIndex += testimonialsPerPage;
-  if (currentIndex >= testimonialsData.length) {
-    currentIndex = 0;
-  }
-  displayTestimonials();
+    // Optional: Implement logic to show more testimonials if needed
 }
-
-console.log("Initial display of testimonials");
-displayTestimonials();
 </script>
 
 {% endblock %}
