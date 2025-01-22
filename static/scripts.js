@@ -66,3 +66,21 @@ $(document).ready(function() {
         }
     }
 });
+
+
+$(document).ready(function() {
+    // Initialize jQuery UI Datepicker on the calendar element
+    $("#calendar").datepicker({
+        onSelect: function() {
+            $("#loading-message").hide();
+        }
+    });
+
+    // Hide the loading message once the datepicker is ready
+    $("#calendar").datepicker("widget").ready(function() {
+        $("#loading-message").hide();
+    });
+});
+
+
+// DEBUGGING 
