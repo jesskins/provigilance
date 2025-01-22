@@ -109,6 +109,42 @@ main {
     color: #007bff;
 }
 
+/* trust pilot temp button - need a website to make a company trustpilot acc to then access their widgets */
+
+.trustpilot-button {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align */
+    text-decoration: none;
+    color: #fff; /* White text and icon */
+    background-color: transparent; /* Dark background */
+    border: 1px solid transparent; /* Button border */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Transition effects */
+    flex-direction: column; /* Stack content vertically */
+  }
+  .trustpilot-button:hover {
+    color: #006ADB; /* Text and icon color on hover */
+  }
+  .trustpilot-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text */
+  }
+  .trustpilot-button .fa-star {
+    font-size: 20px; /* Larger star */
+    margin-bottom: 5px;
+    color: inherit; /* Inherit color */
+  }
+  .trustpilot-button .trustpilot-text {
+    font-size: 10px; /* Consistent text size */
+    font-family: 'Trustpilot', sans-serif; /* Use Trustpilot brand font */
+    color: inherit; /* Inherit color */
+  }
+  
+
 .footer-buttons {
     display: flex;
     align-items: center;
