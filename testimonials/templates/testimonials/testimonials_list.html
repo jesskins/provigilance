@@ -11,18 +11,33 @@
 <script>
 // Your JavaScript code here
 const testimonialsData = [
-  // Testimonials data
+  {
+    "company": "Company 1",
+    "image": "assets/images/profiles/company1.png",
+    "review": "Great service! Would definitely recommend.",
+    "date": "January 2023",
+    "recommend": true
+  },
+  {
+    "company": "Company 2",
+    "image": "assets/images/profiles/company2.png",
+    "review": "Excellent experience. Highly professional.",
+    "date": "March 2022",
+    "recommend": true
+  }
 ];
 
 let currentIndex = 0;
 const testimonialsPerPage = 3;
 
 function displayTestimonials() {
+  console.log("Displaying testimonials");
   const container = document.getElementById('testimonials-container');
   container.innerHTML = '';
 
   for (let i = currentIndex; i < Math.min(currentIndex + testimonialsPerPage, testimonialsData.length); i++) {
     const testimonial = testimonialsData[i];
+    console.log("Testimonial:", testimonial);
     const testimonialDiv = document.createElement('div');
     testimonialDiv.className = 'testimonial';
     
@@ -44,6 +59,7 @@ function displayTestimonials() {
 }
 
 function showMoreTestimonials() {
+  console.log("Showing more testimonials");
   currentIndex += testimonialsPerPage;
   if (currentIndex >= testimonialsData.length) {
     currentIndex = 0;
@@ -51,7 +67,7 @@ function showMoreTestimonials() {
   displayTestimonials();
 }
 
-// Initial display of testimonials
+console.log("Initial display of testimonials");
 displayTestimonials();
 </script>
 
