@@ -32,9 +32,10 @@ urlpatterns = [
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     path('testimonials/submit/', testimonials_views.submit_testimonial, name='submit_testimonial'),
     path('testimonials/success/', testimonials_views.submit_success, name='submit_success'),
+    path('testimonials', testimonials_views.testimonials_list, name='testmonials_list'),
     path('contact/', contact_views.index, name='contact'),
     path('book/', book_views.index, name='book'),
-    path('calendar/', book_views.calendar_view, name='calendar_view'),
+   # path('calendar/', book_views.calendar_view, name='calendar_view'),
     path('privacy-policy/', about_views.privacy_policy, name='privacy_policy'),
     path('admin/', admin.site.urls),
 ] # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # Custom 404 handler 

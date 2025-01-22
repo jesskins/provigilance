@@ -387,3 +387,71 @@ input:invalid, select:invalid, textarea:invalid {
 .privacy-policy ul li {
     margin-bottom: 10px; /* Add spacing between list items */
 }
+
+
+/* testimonial list section styling */
+
+/* General styles for the testimonials section */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .testimonial {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .testimonial-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+  
+  .reverse .testimonial-img {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+  
+  .testimonial-content {
+    flex: 1;
+  }
+  
+  .testimonial-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .testimonial-content p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .recommendation {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .arrow {
+    cursor: pointer;
+    color: #555;
+    font-size: 24px;
+    text-align: center;
+  }
+  

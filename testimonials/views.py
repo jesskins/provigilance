@@ -12,6 +12,9 @@ def index(request):
     testimonials = Testimonial.objects.filter(approved=True)
     return render(request, 'testimonials/testimonials_list.html', {'testimonials': testimonials})
 
+def testimonials_list(request):
+    return render(request, 'testimonials/testimonials_list.html')
+
 # def custom_404(request, exception):
 #    return render(request, '404.html', status=404)
 

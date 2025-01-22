@@ -1,20 +1,58 @@
-<!-- testimonials/templates/testimonials/testimonials_list.html -->
- <h1>Tesitmonials???</h1>
-{% extends "base_generic.html" %}
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block title %}Testimonials{% endblock %}
 
 {% block content %}
 <h1>Testimonials</h1>
-<ul>
-    {% for testimonial in testimonials %}
-    <li>
-        <h2>{{ testimonial.name }}</h2>
-        <p>{{ testimonial.text }}</p>
-        <p>{{ testimonial.company }} - {{ testimonial.role }}</p>
-        <p>Service Date: {{ testimonial.service_month }} {{ testimonial.service_year }}</p>
-        {% if testimonial.image %}
-        <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}">
-        {% endif %}
-    </li>
-    {% endfor %}
-</ul>
+<div id="testimonials-container" class="testimonials"></div>
+<div class="arrow" onclick="showMoreTestimonials()">></div>
+
+<script>
+// Your JavaScript code here
+const testimonialsData = [
+  // Testimonials data
+];
+
+let currentIndex = 0;
+const testimonialsPerPage = 3;
+
+function displayTestimonials() {
+  const container = document.getElementById('testimonials-container');
+  container.innerHTML = '';
+
+  for (let i = currentIndex; i < Math.min(currentIndex + testimonialsPerPage, testimonialsData.length); i++) {
+    const testimonial = testimonialsData[i];
+    const testimonialDiv = document.createElement('div');
+    testimonialDiv.className = 'testimonial';
+    
+    testimonialDiv.innerHTML = `
+      <img src="${testimonial.image}" alt="${testimonial.company}" class="testimonial-img">
+      <div class="testimonial-content">
+        <h3>${testimonial.company}</h3>
+        <p>"${testimonial.review}" - ${testimonial.date}</p>
+        <div class="recommendation">${testimonial.recommend ? '&#10003; Would recommend' : ''}</div>
+      </div>
+    `;
+
+    if (i % 2 === 1) {
+      testimonialDiv.classList.add('reverse');
+    }
+
+    container.appendChild(testimonialDiv);
+  }
+}
+
+function showMoreTestimonials() {
+  currentIndex += testimonialsPerPage;
+  if (currentIndex >= testimonialsData.length) {
+    currentIndex = 0;
+  }
+  displayTestimonials();
+}
+
+// Initial display of testimonials
+displayTestimonials();
+</script>
+
 {% endblock %}
