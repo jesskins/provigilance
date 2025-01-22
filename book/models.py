@@ -28,3 +28,14 @@ class Appointment(models.Model):
 
     def __str__(self):
         return f"Appointment for {self.user.username} on {self.timeslot.day} ({self.timeslot.get_slot_type_display()})"
+
+class Booking(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    date = models.DateField()
+    time = models.TimeField()
+    message = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.date} at {self.time}"

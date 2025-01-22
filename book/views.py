@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import TimeSlot
+from .forms import BookingForm
 
 def index(request):
     return render(request, 'book.html')
@@ -16,5 +17,20 @@ def calendar_view(request):
             'start': slot.day.isoformat(),
             'color': color
         })
+
+
+def booking_page(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('booking_success')
+    else:
+        form = BookingForm()
+    return render(request, 'book.html', {'form': form})
+
+def booking_success(request):
+    return render(request, 'booking_success.html')
+
 
     return render(request, 'book.html', {'events': events})
