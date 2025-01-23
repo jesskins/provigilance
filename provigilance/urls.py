@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include  # Add include here
 from about import views as about_views
 from testimonials import views as testimonials_views
 from book import views as book_views
@@ -16,7 +16,7 @@ urlpatterns = [
     path('testimonials/success/', testimonials_views.submit_success, name='submit_success'),
     path('testimonials', testimonials_views.testimonials_list, name='testmonials_list'),
     path('contact/', contact_views.index, name='contact'),
-    path('book/', book_views.booking_page, name='booking_page'),  # This should point to booking_page view
+    path('book/', book_views.booking_page, name='booking_page'),  # Ensure this points to booking_page view
     path('booking_success/', book_views.booking_success, name='booking_success'),
     path('privacy-policy/', about_views.privacy_policy, name='privacy_policy'),
     path('admin/', admin.site.urls),

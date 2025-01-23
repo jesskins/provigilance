@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Booking, TimeSlot
+from .models import Booking
 from .forms import BookingForm
 
 def booking_page(request):
