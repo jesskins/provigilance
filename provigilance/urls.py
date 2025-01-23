@@ -16,7 +16,7 @@ urlpatterns = [
     path('testimonials/success/', testimonials_views.submit_success, name='submit_success'),
     path('testimonials', testimonials_views.testimonials_list, name='testmonials_list'),
     path('contact/', contact_views.index, name='contact'),
-    path('book/', book_views.booking_page, name='booking_page'),  # Ensure this points to booking_page view
+    path('book/', book_views.index, name='book'),
     path('booking_success/', book_views.booking_success, name='booking_success'),
     path('privacy-policy/', about_views.privacy_policy, name='privacy_policy'),
     path('admin/', admin.site.urls),

@@ -2,7 +2,11 @@ from django.shortcuts import render, redirect
 from .models import Booking
 from .forms import BookingForm
 
-def booking_page(request):
+
+def index(request):
+    return render(request, 'book.html')
+
+def index(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
