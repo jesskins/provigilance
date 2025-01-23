@@ -16,7 +16,7 @@
 </div>
 
 <h2>Make a Booking</h2>
-<form method="post" action="{% url 'booking_page' %}">
+<form method="post" action="{% url 'book' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Book Now</button>
