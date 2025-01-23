@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import TimeSlot, Appointment, Booking
+from .models import TimeSlot, Booking  # Removed Appointment
 
 admin.site.register(TimeSlot)
-admin.site.register(Appointment)
+admin.site.register(Booking)
 
 class BookingAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'date', 'time', 'status')
@@ -18,4 +18,3 @@ class BookingAdmin(admin.ModelAdmin):
         queryset.update(status='R')
     reject_bookings.short_description = "Mark selected bookings as rejected"
 
-admin.site.register(Booking, BookingAdmin)
