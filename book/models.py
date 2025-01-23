@@ -30,12 +30,19 @@ class Appointment(models.Model):
         return f"Appointment for {self.user.username} on {self.timeslot.day} ({self.timeslot.get_slot_type_display()})"
 
 class Booking(models.Model):
+    STATUS_CHOICES = [
+        ('P', 'Pending'),
+        ('A', 'Approved'),
+        ('R', 'Rejected'),
+    ]
+
     name = models.CharField(max_length=100)
     email = models.EmailField()
     date = models.DateField()
     time = models.TimeField()
     message = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='P')
 
     def __str__(self):
         return f"{self.name} - {self.date} at {self.time}"
