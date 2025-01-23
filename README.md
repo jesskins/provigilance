@@ -299,6 +299,13 @@ Provide links to validation tools used.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## Debugging 
+
+AI was used to assist in debugging code. 
+
+Additionally, external resources such as stack overflow was used to help debug issues, especially in relation to failure of JQueries. [Please see here](https://stackoverflow.com/questions/33998262/jquery-ui-and-webpack-how-to-manage-it-into-module/39230057#39230057)
+
+
 
 <!-- CONTRIBUTING -->
 ## Contributing

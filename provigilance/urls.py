@@ -35,6 +35,8 @@ urlpatterns = [
     path('testimonials', testimonials_views.testimonials_list, name='testmonials_list'),
     path('contact/', contact_views.index, name='contact'),
     path('book/', book_views.index, name='book'),
+    path('book/', book_views.booking_page, name='booking_page'),
+    path('booking_success/', book_views.booking_success, name='booking_success'),
    # path('calendar/', book_views.calendar_view, name='calendar_view'),
     path('privacy-policy/', about_views.privacy_policy, name='privacy_policy'),
     path('admin/', admin.site.urls),
