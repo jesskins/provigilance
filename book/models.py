@@ -30,12 +30,19 @@ class Booking(models.Model):
 
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    date = models.DateField()
-    time = models.TimeField()
+    phone_number = models.CharField(max_length=15, default="Unknown")
+    preferred_contact_type = models.CharField(max_length=50, default="Email")
+    preferred_contact_time = models.CharField(max_length=50, blank=True, null=True, default="Anytime")
+    company = models.CharField(max_length=100, default="Unknown Company")
+    service_type = models.CharField(max_length=100, default="General")
+    start_date = models.DateField()
+    start_time = models.CharField(max_length=10, default="00:00")
+    duration = models.IntegerField(default=1)  # Instead of length
+    returning_customer = models.BooleanField(default=False)
     message = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='P')
-    timeslot = models.ForeignKey(TimeSlot, on_delete=models.CASCADE)
+    timeslot = models.ForeignKey(TimeSlot, on_delete=models.CASCADE, default=1)  # Use the created ID
 
     def __str__(self):
-        return f"{self.name} - {self.date} at {self.time}"
+        return f"{self.name} - {self.start_date} at {self.start_time}"
