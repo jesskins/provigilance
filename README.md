@@ -306,6 +306,13 @@ AI was used to assist in debugging code.
 Additionally, external resources such as stack overflow was used to help debug issues, especially in relation to failure of JQueries. [Please see here](https://stackoverflow.com/questions/33998262/jquery-ui-and-webpack-how-to-manage-it-into-module/39230057#39230057)
 
 
+## An overview of artificial intellegence use in this project
+
+- AI was also used to help add comments and missing aria-labels, to meet PEP8 guidelines. While the comments may be a little janky, they provided a useful promt for me to write over in my own words to better understand when coming to review. AI was very helpful in providing the base template for the aria labels which I could then amend, hence proving to be a great time saver. 
+
+- AI was an excellent organisational tool for arduous tasks, for example AI was able to compare my project to the mark scheme and present an action plan to implement these, to meet MVP for the assessment criteria. 
+[Please see this doc for examples](https://docs.google.com/document/d/16haXEoKpJzboay5zRGtMt_Hq5ZxSdGOp9jV-yURNXYQ/edit?pli=1&tab=t.0#heading=h.dden1mj8cyor)
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
