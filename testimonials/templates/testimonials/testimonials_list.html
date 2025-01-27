@@ -4,12 +4,16 @@
 {% block title %}Testimonials{% endblock %}
 
 {% block content %}
-<h1>Testimonials</h1>
+<!-- Hero Banner -->
+<div class="hero-banner">
+    <h1>Testimonials</h1>
+</div>
+
 <div id="testimonials-container" class="testimonials">
     {% for testimonial in testimonials %}
         <div class="testimonial{% if forloop.counter0|divisibleby:2 %} reverse{% endif %}">
             {% if testimonial.image %}
-                <img src="{{ testimonial.image.url }}" alt="{{ testimonial.company }}" class="testimonial-img">
+                <img src="{{ testimonial.image.url }}" alt="Testimonial from {{ testimonial.company }}" class="testimonial-img">
             {% endif %}
             <div class="testimonial-content">
                 <p>{{ testimonial.text }} - {{ testimonial.service_month }} {{ testimonial.service_year }}</p>
@@ -24,6 +28,12 @@
         </div>
     {% endfor %}
 </div>
+
+<!-- Submit Your Own Testimonial Link -->
+<div class="submit-your-own">
+    <p>We value your feedback and it helps us grow our business. <a href="{% url 'submit_testimonial' %}">Submit your own testimonial</a></p>
+</div>
+
 <div class="arrow" onclick="showMoreTestimonials()">></div>
 
 <script>

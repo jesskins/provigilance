@@ -19,7 +19,7 @@
 <form method="post" action="{% url 'book' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Book Now</button>
+    <button type="submit">Submit Booking Request</button>
     {% if form.errors %}
         <div class="error">
             {% for field in form %}

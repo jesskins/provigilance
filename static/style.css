@@ -391,6 +391,25 @@ input:invalid, select:invalid, textarea:invalid {
 
 /* testimonial list section styling */
 
+
+/* Add this to your CSS file (e.g., style.css) */
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #006ADB , #038d11);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.hero-banner h1 {
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+
 /* General styles for the testimonials section */
 .testimonials {
     display: flex;
