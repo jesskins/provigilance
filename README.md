@@ -238,6 +238,15 @@ Instruction from [dev genius](https://blog.devgenius.io/django-tutorial-on-how-t
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+Submission Success - booking, request call back and testimonial submission. 
+
+Following the successful submission of one for the website forms the user should be sent an email confirming their submission. 
+To make this operational, I set up a new email for the testing phase to ensure no errors or addtional faff to the current, operational business email address. 
+Initially, I attempted to set this up directly with google via Google Cloud. However, due to recent more rigerous [privacy restrictions](https://cloud.google.com/endpoints/docs/openapi/serving-apis-from-domains) I was unable to do meet their privacy criteria - namely having a secure and top level domain. 
+Therefore, a "middle-man" software, [Brevo ("SendinBlue")](https://www.brevo.com/) was used to ensure emails were sent despite not meeting Google Cloud's required secutrity. 
+In the future, I would intend to remove this service and directly manage this function, once the website is up and running, and able to meet the privacy/secutiry measures. 
+
+
 ## Testing and Validation 
 
 ### Automated Tests

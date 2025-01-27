@@ -1,5 +1,6 @@
+# views.py
 from django.shortcuts import render, redirect
-from .models import Booking
+from .models import Booking, TimeSlot  # Ensure TimeSlot is imported
 from .forms import BookingForm
 
 def index(request):
@@ -7,19 +8,21 @@ def index(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
-            timeslot = TimeSlot.objects.get(day=booking.date)
-            timeslot.is_available = False
-            timeslot.save()
-            booking.timeslot = timeslot
-            booking.save()
-            return redirect('booking_success')
+            try:
+                timeslot = TimeSlot.objects.get(day=booking.start_date, is_available=True)  # Check for available timeslot
+                timeslot.is_available = False
+                timeslot.save()
+                booking.timeslot = timeslot
+                booking.save()
+                return redirect('booking_success')
+            except TimeSlot.DoesNotExist:
+                form.add_error('start_date', 'No available timeslot for the selected date.')
     else:
         form = BookingForm()
     return render(request, 'book.html', {'form': form})
 
 def booking_success(request):
     return render(request, 'booking_success.html')
-
 
 def calendar_view(request):
     timeslots = TimeSlot.objects.all()
