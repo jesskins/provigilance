@@ -3,6 +3,10 @@ from datetime import timedelta, datetime
 from book.models import TimeSlot
 
 def generate_timeslots():
+    # Ensure all existing timeslots are deleted
+    TimeSlot.objects.all().delete()
+    print("All timeslots deleted.")
+
     start_date = datetime.now().date()
     end_date = start_date + timedelta(days=365)  # Adjust as needed
 
@@ -12,14 +16,13 @@ def generate_timeslots():
                 slot_type = 'AM' if hour < 12 else 'PM'
                 duration = 'FD' if hour == 8 else 'HD'
 
-                # Use get_or_create to avoid duplicates
-                timeslot, created = TimeSlot.objects.get_or_create(
+                # Create new timeslots
+                TimeSlot.objects.create(
                     day=single_date,
                     slot_type=slot_type,
-                    defaults={'duration': duration, 'is_available': True}
+                    duration=duration,
+                    is_available=True,
                 )
+                print(f'Created timeslot for {single_date} at {hour}:00')
 
-                if created:
-                    print(f'Created timeslot for {single_date} at {hour}:00')
-                else:
-                    print(f'Timeslot for {single_date} at {hour}:00 already exists')
+    print('Successfully generated timeslots')

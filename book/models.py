@@ -13,10 +13,13 @@ class TimeSlot(models.Model):
         ('FD', 'Full Day'),
     ]
 
-    day = models.DateField(unique=True)
+    day = models.DateField()
     slot_type = models.CharField(max_length=2, choices=SLOT_CHOICES)
     duration = models.CharField(max_length=2, choices=DURATION_CHOICES)
     is_available = models.BooleanField(default=True)
+
+    class Meta:
+        unique_together = ('day', 'slot_type')
 
     def __str__(self):
         return f"{self.day} - {self.get_slot_type_display()} ({self.get_duration_display()})"
@@ -46,3 +49,4 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.start_date} at {self.start_time}"
+
