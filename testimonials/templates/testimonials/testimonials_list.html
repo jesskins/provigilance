@@ -18,7 +18,7 @@
     {% for testimonial in testimonials %}
         <div class="testimonial{% if forloop.counter0|divisibleby:2 %} reverse{% endif %}" role="region" aria-label="Testimonial from {{ testimonial.name.split|first }} at {{ testimonial.company }}">
             {% if testimonial.image %}
-                <img src="{{ testimonial.image.url }}" alt="Testimonial from {{ testimonial.company }}" class="testimonial-img">
+                <img src="{{ testimonial.image.url }}" alt="Photo of {{ testimonial.name }} from {{ testimonial.company }}" class="testimonial-img">
             {% endif %}
             <div class="testimonial-content">
                 <p>{{ testimonial.text }} - {{ testimonial.service_month }} {{ testimonial.service_year }}</p>
