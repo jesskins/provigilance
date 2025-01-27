@@ -9,6 +9,11 @@
     <h1>Testimonials</h1>
 </div>
 
+<!-- Introductory Text -->
+<div class="intro-text">
+    <p>Provigilance has been in business since 2006. Over this time we have relied primarily on word of mouth and repeat business. Here are some testimonials from our clients.</p>
+</div>
+
 <div id="testimonials-container" class="testimonials">
     {% for testimonial in testimonials %}
         <div class="testimonial{% if forloop.counter0|divisibleby:2 %} reverse{% endif %}">

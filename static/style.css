@@ -394,9 +394,11 @@ input:invalid, select:invalid, textarea:invalid {
 
 /* Add this to your CSS file (e.g., style.css) */
 
+/* Add this to your CSS file (e.g., style.css) */
+
 /* Hero Banner */
 .hero-banner {
-    background: linear-gradient(135deg, #006ADB , #038d11);
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF); /* Sleeker color scheme */
     color: white;
     text-align: center;
     padding: 50px 0;
@@ -407,6 +409,73 @@ input:invalid, select:invalid, textarea:invalid {
     font-size: 3em;
     margin: 0;
     text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Introductory Text */
+.intro-text {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Testimonials Container */
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Testimonial */
+.testimonial {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: 20px;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.testimonial.reverse {
+    flex-direction: row-reverse;
+}
+
+.testimonial-img {
+    border-radius: 50%;
+    height: 100px;
+    margin-right: 20px;
+    width: 100px;
+}
+
+.testimonial-content {
+    flex: 1;
+}
+
+.testimonial h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+/* Submit Your Own */
+.submit-your-own {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.submit-your-own a {
+    background: #4CA1AF;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.submit-your-own a:hover {
+    background: #2C3E50;
 }
 
 
@@ -424,6 +493,8 @@ input:invalid, select:invalid, textarea:invalid {
     width: 80%;
     padding: 20px;
     background-color: #f8f9fa;
+    width: 80%; /* Ensuring larger width */
+    max-width: 800px; /* Keeping a maximum width for large screens */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
