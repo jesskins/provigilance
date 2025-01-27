@@ -9,8 +9,8 @@ class BookingForm(forms.ModelForm):
             'start_date': forms.SelectDateWidget(),
         }
 
-    def clean_start_date(self):
-        start_date = self.cleaned_data['start_date']
-        if not TimeSlot.objects.filter(day=start_date, is_available=True).exists():
-            raise forms.ValidationError("No available timeslot for the selected date.")
-        return start_date
+#    def clean_start_date(self):
+ #       start_date = self.cleaned_data['start_date']
+  #      if not TimeSlot.objects.filter(day=start_date, is_available=True).exists():
+   #         raise forms.ValidationError("No available timeslot for the selected date.")
+    #    return start_date
