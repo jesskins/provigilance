@@ -9,12 +9,15 @@ def index(request):
         if form.is_valid():
             booking = form.save(commit=False)
             try:
-                timeslot = TimeSlot.objects.get(day=booking.start_date, is_available=True)  # Check for available timeslot
-                timeslot.is_available = False
-                timeslot.save()
-                booking.timeslot = timeslot
-                booking.save()
-                return redirect('booking_success')
+                timeslot = TimeSlot.objects.filter(day=booking.start_date, is_available=True).first()  # Check for available timeslot
+                if timeslot:
+                    timeslot.is_available = False
+                    timeslot.save()
+                    booking.timeslot = timeslot
+                    booking.save()
+                    return redirect('booking_success')
+                else:
+                    form.add_error('start_date', 'No available timeslot for the selected date.')
             except TimeSlot.DoesNotExist:
                 form.add_error('start_date', 'No available timeslot for the selected date.')
     else:
