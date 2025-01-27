@@ -226,36 +226,69 @@ body.dark-mode .footer-content {
 }
 
 /* Contact page styles */
-.contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
 
-.contact-details p {
-    margin: 10px 0;
-}
-
-.cta-button {
-    margin-top: 20px;
+/* Contact Information Banner */
+.contact-banner {
+    background: linear-gradient(135deg, #4CA1AF, #2C3E50); /* Consistent color scheme */
+    color: white;
     text-align: center;
+    padding: 50px 0;
+    border-bottom: 5px solid #f9f9f9; /* Straight banner */
+}
+
+.contact-banner h1 {
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contact Container */
+.contact-container {
+    max-width: 800px; /* Ensuring it matches other containers */
+    margin: 20px auto; /* Consistent margin */
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px; /* Consistent border-radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Details */
+.contact-details {
+    text-align: left;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.contact-details a {
+    color: #4CA1AF;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* CTA Button */
+.cta-button {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .cta-button button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background: #4CA1AF; /* Consistent button color */
     border: none;
     border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
     cursor: pointer;
+    font-size: 1em;
 }
 
 .cta-button button:hover {
-    background-color: #0056b3;
+    background: #2C3E50;
 }
+
 
 /* FORMS.PY CSS STYLING */
 
@@ -315,7 +348,7 @@ input:valid, select:valid, textarea:valid {
 }
 
 input:invalid, select:invalid, textarea:invalid {
-    border-color: #dc3545;
+    border-color: #8a111d;
 }
 
 /* Clear button CSS */
@@ -545,3 +578,41 @@ input:invalid, select:invalid, textarea:invalid {
     text-align: center;
   }
   
+
+
+
+
+/* submit success css to follow - wanted more of a bright and simple design */
+
+/* Add this to your CSS file (e.g., style.css) */
+
+/* Gratitude Banner */
+.gratitude-banner {
+    background: linear-gradient(135deg, #4CA1AF, #2C3E50);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+}
+
+.gratitude-banner h1 {
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Success Message */
+.success-message {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+

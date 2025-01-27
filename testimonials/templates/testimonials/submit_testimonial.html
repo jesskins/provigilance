@@ -4,11 +4,14 @@
 {% block title %}Submit Testimonial{% endblock %}
 
 {% block content %}
-<h1>Submit Testimonial</h1>
+<!-- Hero Banner -->
+<div class="hero-banner">
+    <h1>Submit Testimonial</h1>
+</div>
+
 <div class="form-container">
     <form method="post" action="{% url 'submit_testimonial' %}" enctype="multipart/form-data" id="testimonial-form">
         {% csrf_token %}
-        <!-- Existing form fields rendered -->
         {{ form.as_p }}
     
         <div class="form-actions">
