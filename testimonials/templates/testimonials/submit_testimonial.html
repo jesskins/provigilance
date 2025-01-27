@@ -6,17 +6,17 @@
 {% block content %}
 <!-- Hero Banner -->
 <div class="hero-banner">
-    <h1>Submit Testimonial</h1>
+    <h1 id="submit-testimonial-heading">Submit Testimonial</h1>
 </div>
 
 <div class="form-container">
-    <form method="post" action="{% url 'submit_testimonial' %}" enctype="multipart/form-data" id="testimonial-form">
+    <form method="post" action="{% url 'submit_testimonial' %}" enctype="multipart/form-data" id="testimonial-form" aria-labelledby="submit-testimonial-heading">
         {% csrf_token %}
         {{ form.as_p }}
     
         <div class="form-actions">
-            <button type="submit">Submit</button>
-            <button type="button" id="clear-form" title="Clear Form">
+            <button type="submit" aria-label="Submit Testimonial">Submit</button>
+            <button type="button" id="clear-form" title="Clear Form" aria-label="Clear Form">
                 <i class="fas fa-sync-alt"></i>
             </button>
         </div>

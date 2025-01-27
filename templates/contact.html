@@ -6,20 +6,20 @@
 {% block content %}
 <!-- Contact Information Banner -->
 <div class="contact-banner">
-    <h1>Contact Information</h1>
+    <h1 id="contact-heading">Contact Information</h1>
 </div>
 
-<div class="contact-container">
+<div class="contact-container" aria-labelledby="contact-heading">
     <div class="contact-details">
         <p><strong>Phone:</strong> 01980 1234 567890</p>
-        <p><strong>Email:</strong> <a href="mailto:mhowkins@provigilance.co.uk">mhowkins@provigilance.co.uk </a></p>
+        <p><strong>Email:</strong> <a href="mailto:mhowkins@provigilance.co.uk">mhowkins@provigilance.co.uk</a></p>
         <p><strong>Mobile:</strong> +44 9876 543210</p>
         <p><strong>General Working Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM (GMT)</p>
         <p><em>Please note: We are able to work outside of these hours relative to your own timezone.</em></p>
-        <p><strong>Approximate Response Time:</strong> We will endevour to get back to you within 24 working hours</p>
+        <p><strong>Approximate Response Time:</strong> We will endeavor to get back to you within 24 working hours.</p>
     </div>
     <div class="cta-button">
-        <button onclick="requestCallBack()">Request Call Back</button>
+        <button onclick="requestCallBack()" aria-label="Request Call Back">Request Call Back</button>
     </div>
 </div>
 {% endblock %}

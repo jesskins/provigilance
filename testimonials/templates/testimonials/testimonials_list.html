@@ -6,7 +6,7 @@
 {% block content %}
 <!-- Hero Banner -->
 <div class="hero-banner">
-    <h1>Testimonials</h1>
+    <h1 id="testimonials-heading">Testimonials</h1>
 </div>
 
 <!-- Introductory Text -->
@@ -14,9 +14,9 @@
     <p>Provigilance has been in business since 2006. Over this time we have relied primarily on word of mouth and repeat business. Here are some testimonials from our clients.</p>
 </div>
 
-<div id="testimonials-container" class="testimonials">
+<div id="testimonials-container" class="testimonials" aria-labelledby="testimonials-heading">
     {% for testimonial in testimonials %}
-        <div class="testimonial{% if forloop.counter0|divisibleby:2 %} reverse{% endif %}">
+        <div class="testimonial{% if forloop.counter0|divisibleby:2 %} reverse{% endif %}" role="region" aria-label="Testimonial from {{ testimonial.name.split|first }} at {{ testimonial.company }}">
             {% if testimonial.image %}
                 <img src="{{ testimonial.image.url }}" alt="Testimonial from {{ testimonial.company }}" class="testimonial-img">
             {% endif %}
@@ -39,7 +39,7 @@
     <p>We value your feedback and it helps us grow our business. <a href="{% url 'submit_testimonial' %}">Submit your own testimonial</a></p>
 </div>
 
-<div class="arrow" onclick="showMoreTestimonials()">></div>
+<div class="arrow" onclick="showMoreTestimonials()" role="button" tabindex="0" aria-label="Show more testimonials">></div>
 
 <script>
 function showMoreTestimonials() {

@@ -3,11 +3,10 @@
 {% block content %}
 <!-- Gratitude Banner -->
 <div class="gratitude-banner">
-    <h1>Complete!</h1>
+    <h1 id="gratitude-heading">Thank You!</h1>
 </div>
 
-<div class="success-message">
-    <p>Thank you for taking the time to submit your feedback. We are a small business that relies primarily on word of mouth for growth.<br> 
-        Your testimonial has been submitted successfully and means a lot to us!</p>
+<div class="success-message" role="status" aria-labelledby="gratitude-heading">
+    <p>Thank you for taking the time to submit your feedback. We are a small business that relies primarily on word of mouth for growth. Your testimonial has been submitted successfully and means a lot to us!</p>
 </div>
 {% endblock %}
