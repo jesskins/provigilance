@@ -1,9 +1,9 @@
 # book/utils.py
 from datetime import timedelta, datetime
-from book.models import TimeSlot
+from .models import TimeSlot
 
 def generate_timeslots():
-    # Ensure all existing timeslots are deleted
+    # Clear all existing timeslots
     TimeSlot.objects.all().delete()
     print("All timeslots deleted.")
 
