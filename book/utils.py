@@ -1,5 +1,5 @@
 # book/utils.py
-from datetime import timedelta, datetime
+from datetime import timedelta, datetime, date
 from .models import TimeSlot
 
 def generate_timeslots():
@@ -7,7 +7,7 @@ def generate_timeslots():
     TimeSlot.objects.all().delete()
     print("All timeslots deleted.")
 
-    start_date = datetime.now().date()
+    start_date = date(2025, 2, 1)  # Start from February 1st
     end_date = start_date + timedelta(days=365)  # Adjust as needed
 
     for single_date in (start_date + timedelta(n) for n in range((end_date - start_date).days)):
@@ -16,13 +16,16 @@ def generate_timeslots():
                 slot_type = 'AM' if hour < 12 else 'PM'
                 duration = 'FD' if hour == 8 else 'HD'
 
-                # Create new timeslots
-                TimeSlot.objects.create(
+                # Create new timeslots and log details
+                timeslot, created = TimeSlot.objects.get_or_create(
                     day=single_date,
                     slot_type=slot_type,
-                    duration=duration,
-                    is_available=True,
+                    defaults={'duration': duration, 'is_available': True}
                 )
-                print(f'Created timeslot for {single_date} at {hour}:00')
+
+                if created:
+                    print(f"Created timeslot for {single_date} at {hour}:00")
+                else:
+                    print(f"Timeslot for {single_date} at {hour}:00 already exists")
 
     print('Successfully generated timeslots')
