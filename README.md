@@ -43,8 +43,6 @@
     <li>
       <a href="#documentation">Documentation</a>
       <ul>
-        <li><a href="#ux-design-process">Document the UX Design Process</a></li>
-        <li><a href="#research">Research</a></li>
         <li><a href="#user-stories">User Stories</a></li>
         <li><a href="#key-features">Key Features</a></li>
       </ul>
@@ -94,50 +92,8 @@ This section lists the major frameworks/libraries used to build Provigilance:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-Follow these steps to get a local copy of Provigilance up and running:
-
-### Prerequisites
-
-Ensure you have the following prerequisites installed:
-* npm
-  ```sh
-  npm install npm@latest -g
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 ## Documentation
 
-### Document the UX Design Process
-
-**Wireframes, Mockups, and Diagrams:**
 
 #### Wireframes
 
@@ -145,26 +101,15 @@ Wireframes were created in Balsamiq to give an approximate idea for the design a
   
   ![Desktop Wireframe](assets/readme/wf_desktop.png)
   ![Mobile Wireframe](assets/readme/wf_mobile.png)
-  ![Mockup Example](path/to/mockup.png)
-  ![Diagram Example](path/to/diagram.png)
+
 
 **Reasoning for Changes:**
 - **Initial Concept:** 
-  - Explain the initial idea and vision for the project.
+  - To build a website which was 
 - **Feedback and Revisions:**
   - Document any feedback received and changes made based on that feedback.
 - **Final Design:**
   - Provide a summary of the final design and why certain decisions were made.
-
-
-**UX Process:**
-- Detail the steps taken during the UX design process.
-  - Research and analysis.
-  - User Stories: User personas and scenarios.
-  - Wireframing and prototyping.
-  - Usability testing and iterations.
-
-### Research 
 
 
 ### User Stories
