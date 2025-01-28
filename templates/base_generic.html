@@ -67,28 +67,29 @@
     <footer>
         <div class="footer-main">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/mike-howkins-81177723/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/mike-howkins-81177723/" target="_blank" aria-label="link to director's linkedin page">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                 </a>
                 <!--- Dead link for now as need a website to get company on trust pilot -->
-                <a class="trustpilot-button" href="https://www.trustpilot.com/" target="_blank">
-                    <div class="trustpilot-content">
+                <a class="trustpilot-button" href="https://www.trustpilot.com/" target="_blank" aria-label="Link to trustpilot">
+                    <div class="trustpilot-content" aria-hidden="true">
                       <i class="fa-solid fa-star"></i>
                       <span class="trustpilot-text">Trustpilot</span>
                     </div>
                 </a>
             </div>
             <div class="footer-links">
-            <a href="https://find-and-update.company-information.service.gov.uk/company/05957663" target="_blank">
-                <img src="{% static 'images/gov-uk.png' %}" alt="Gov.uk Logo" class="gov-uk-icon">
+            <a href="https://find-and-update.company-information.service.gov.uk/company/05957663" target="_blank" aria-labe="Link to Gov.uk Registery">
+                <img src="{% static 'images/gov-uk.png' %}" alt="Gov.uk Logo" class="gov-uk-icon" aria-hidden="true">
             </a> 
-                <a class="footer-text" href="/privacy-policy/" about="_blank">Privacy Policy</a> 
+                <a class="footer-text" href="/privacy-policy/" about="_blank" aria-label="link to company privacy policy">Privacy Policy</a> 
             </div>
             <div class="footer-buttons">
-                <button id="back-to-top" onclick="scrollToTop()">
-                    <i class="fas fa-arrow-up"></i></button>
-                <button id="toggle-theme">
-                    <i class="fas fa-adjust"></i></button>
+                <button id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                </button>
+                <button id="toggle-theme" aria-label="Toggle Theme light or dark">
+                    <i class="fas fa-adjust" aria-hidden="true"></i></button>
             </div>
             <!-- Add this where you want the button link to appear -->
         </div>
@@ -98,8 +99,8 @@
                 
             <div class="footer-bottom-dev">
                 <p>Website created by Jess 
-                <a href="https://github.com/jesskins" target="_blank">
-                    <i class="fab fa-github"></i>
+                <a href="https://github.com/jesskins" target="_blank" aria-label="To web creator GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
             </p>
             </div>
