@@ -1,10 +1,17 @@
 $(document).ready(function() {
     // Initialize jQuery UI Datepicker on the calendar element
-   $("#calendar").datepicker({
-        // Customize the datepicker options if needed
-   });
+    $("#calendar").datepicker({
+        onSelect: function() {
+            $("#loading-message").hide();
+        }
+    });
 
-    // New functions for the footer
+    // Hide the loading message once the datepicker is ready
+    $("#calendar").datepicker("widget").ready(function() {
+        $("#loading-message").hide();
+    });
+
+    // Dark mode toggle
     document.getElementById('toggle-theme').addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
     });
@@ -27,6 +34,7 @@ $(document).ready(function() {
         }
     });
 
+    // Form validation and clear functionality
     const form = document.getElementById('testimonial-form');
     if (form) {
         const inputs = form.querySelectorAll('input, select, textarea');
@@ -63,18 +71,4 @@ $(document).ready(function() {
             });
         }
     }
-});
-
-// Initialize jQuery UI Datepicker on the calendar element
-$(document).ready(function() {
-    $("#calendar").datepicker({
-        onSelect: function() {
-            $("#loading-message").hide();
-        }
-    });
-
-    // Hide the loading message once the datepicker is ready
-    $("#calendar").datepicker("widget").ready(function() {
-        $("#loading-message").hide();
-    });
 });
