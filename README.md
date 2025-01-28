@@ -254,25 +254,11 @@ The Django Admin interface was implemented to meet requirements to add, edit, de
 
 ## Testing and Validation 
 
-### Automated Tests
-
-Include details about automated testing here.
-
-- **Unit Tests:**
-  - Describe the unit tests you've implemented.
-  - ![Unit Test Screenshot](path/to/unit-test-screenshot.png)
-- **Integration Tests:**
-  - Describe the integration tests you've implemented.
-  - ![Integration Test Screenshot](path/to/integration-test-screenshot.png)
-
 ### Manual Testing
 
-Outline the manual testing processes and results.
-
 - **User Testing:**
-  - Describe the user testing methods.
-  - Provide screenshots of user testing results.
-  - ![User Testing Screenshot](path/to/user-testing-screenshot.png)
+  - User testing was performed little and often during development to ensure the functionality and design was being conveyed correctly. 
+- Other users were recruited to make suggestions regarding design features and usability. 
 
 ### Validation
 
@@ -280,13 +266,20 @@ Provide links to validation tools used.
 
 - **HTML Validation:**
   - [W3C Markup Validation Service](https://validator.w3.org/)
+  - No errors or warnings were found in style.css.
+  [!Valdiation result](assets/readme/cssvalidation.png)
 - **CSS Validation:**
   - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+   - No errors or warnings were found in style.css.
+  [!Valdiation result](assets/readme/cssvalidation.png)
 - **Accessibility Validation:**
   - [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/)
+  - No errors, some points to be amended but nothing urgent. 
+  [!Wave Result](assets/readme/waveaccessibility.png)
   - [Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+  - Generally the webpage didn't use that much colour and stuck to off white and greys, with some bright blues/light bright blues which changed depending on the foreground/background for contrast.
+  [!Colour contrast results](assets/readme/contrastresults.png)
 
-### Language-Specific Validation
 
 #### Python
 - **Linting and Formatting:**
