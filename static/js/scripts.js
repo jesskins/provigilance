@@ -4,35 +4,6 @@ $(document).ready(function() {
         // Customize the datepicker options if needed
    });
 
-// Function to toggle search bar visibility
-function toggleSearch() {
-    const searchBar = document.getElementById('searchBar');
-    console.log('toggleSearch function called'); // Debugging log
-    if (searchBar.style.display === 'none' || searchBar.style.display === '') {
-        searchBar.style.display = 'block';
-    } else {
-        searchBar.style.display = 'none';
-    }
-}
-
-// Use jQuery's $(document).ready() to ensure the DOM is fully loaded
-$(document).ready(function() {
-    console.log('$(document).ready event fired'); // Debugging log
-    const toggleButton = document.getElementById('searchIcon');
-    if (toggleButton) {
-        console.log('Adding click event listener to searchIcon'); // Debugging log
-        toggleButton.addEventListener('click', toggleSearch);
-    } else {
-        console.log('searchIcon element not found'); // Debugging log
-    }
-});
-
-    
-    // Function to handle the request call back button
-    function requestCallBack() {
-        window.location.href = "/request-callback/";
-    }
-
     // New functions for the footer
     document.getElementById('toggle-theme').addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');

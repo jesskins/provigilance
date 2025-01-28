@@ -45,6 +45,13 @@ main {
     color: #ffffff;
 }
 
+.navbar .navbar-nav {
+    margin-left: auto; /* Push navbar items to the right */
+    display: flex; 
+    justify-content: flex-end; /* Ensure items align to the right */
+    width: 100%; /* Ensure the nav takes full width */
+}
+
 .navbar .navbar-nav .nav-link {
     color: #ffffff;
 }
@@ -53,63 +60,11 @@ main {
     color: #00aaff;
 }
 
-.navbar .navbar-toggler-icon {
-    color: #ffffff;
-}
-
-/* Collapsible search bar */
-.search-bar {
-    display: none;
-}
-
-/* Search icon */
-.search-icon {
-    cursor: pointer;
-    color: white;
-    font-size: 110%;
-    margin-right: 5px; /* Reduce space between icon and search bar */
-}
-
-/* Search bar and button styles */
-.search-bar input {
-    margin-right: 5px; /* Reduce space between input and button */
-    max-width: 200px; /* Limit the width of the search input */
-}
-
-.search-bar input:focus {
-    border-color: #007bff; /* Change border color when focused */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add light blue shadow */
-}
-
-.search-bar form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Align items within the form */
-}
-
-.search-bar form .btn {
-    background-color: #4CA1AF; /* Button color */
-    color: white;
-    border: none;
-}
-
-.search-bar form .btn:hover {
-    background-color: #2C3E50; /* Hover color */
-}
 
 /* Adjust layout for smaller screen sizes */
 @media (max-width: 768px) {
     .navbar-collapse {
         justify-content: space-between; /* Spread items evenly across navbar */
-    }
-
-    .search-bar {
-        display: flex;
-        align-items: center;
-    }
-
-    .search-bar input {
-        max-width: 100px; /* Further limit the width for small screens */
     }
 }
 
