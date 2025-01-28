@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'production',
-    entry: './static/js/scripts.js',
+    mode: 'production', // Set the mode to production for optimized builds
+    entry: './static/js/scripts.js', // Corrected entry point
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'static/js')
+        path: path.resolve(__dirname, 'static/js') // Output directory to match your structure
     },
     module: {
         rules: [
