@@ -286,7 +286,7 @@ body.dark-mode .footer-content {
 }
 
 .contact-details a {
-    color: #4CA1AF;
+    color: #2C3E50;
     text-decoration: none;
 }
 
@@ -301,10 +301,10 @@ body.dark-mode .footer-content {
 }
 
 .cta-button button {
-    background: #4CA1AF; /* Consistent button color */
+    background: #4CA1AF;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: #3f3f3f;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 1em;
