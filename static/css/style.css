@@ -222,14 +222,6 @@ section.bg-light {
     color: #6c757d;
 }
 
-.footer-bottom-buis {
-    align-items: left;
-}
-
-.footer-bottom-dev {
-    align-items: right;
-}
-
 .footer-bottom a {
     color: #006ADB;
     text-decoration: none;
