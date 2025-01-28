@@ -1,6 +1,7 @@
 from django import forms
 from .models import Testimonial
-import datetime 
+import datetime
+
 
 class TestimonialForm(forms.ModelForm):
     MONTH_CHOICES = [
@@ -18,7 +19,7 @@ class TestimonialForm(forms.ModelForm):
         ('November', 'November'),
         ('December', 'December'),
     ]
-    
+
     current_year = datetime.datetime.now().year
     YEAR_CHOICES = [(year, year) for year in range(2006, current_year + 1)]
 
@@ -32,7 +33,10 @@ class TestimonialForm(forms.ModelForm):
 
     class Meta:
         model = Testimonial
-        fields = ['name', 'email', 'company', 'role', 'text', 'image', 'service_month', 'service_year', 'recommend']
+        fields = [
+            'name', 'email', 'company', 'role', 'text', 
+            'image', 'service_month', 'service_year', 'recommend'
+        ]
         widgets = { 
             'name': forms.TextInput(attrs={'placeholder': 'Enter your name'}), 
             'email': forms.EmailInput(attrs={'placeholder': 'Enter your email'}), 

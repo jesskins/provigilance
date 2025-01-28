@@ -5,12 +5,16 @@ from .forms import TestimonialForm
 import subprocess
 import os
 
+
 def index(request):
     testimonials = Testimonial.objects.filter(approved=True)
-    return render(request, 'testimonials/testimonials_list.html', {'testimonials': testimonials})
+    return render(request, 'testimonials/testimonials_list.html',
+                {'testimonials': testimonials})
+
 
 def testimonials_list(request):
     return render(request, 'testimonials/testimonials_list.html')
+
 
 def submit_testimonial(request):
     if request.method == 'POST':
@@ -18,12 +22,11 @@ def submit_testimonial(request):
         if form.is_valid():
             # Save the form and get the testimonial instance
             testimonial = form.save()
-            print("Testimonial saved:", testimonial)  # Debugging print statement
+            print("Testimonial saved:", testimonial)
 
-            # Extract email and name from the testimonial instance
             recipient_email = testimonial.email
             recipient_name = testimonial.name
-            print(f"Email: {recipient_email}, Name: {recipient_name}")  # Debugging print statement
+            print(f"Email: {recipient_email}, Name: {recipient_name}")
 
             # Call the send_email.py script with the recipient's email and name
             script_path = os.path.join(os.path.dirname(__file__), 'send_email.py')
@@ -32,7 +35,9 @@ def submit_testimonial(request):
             return redirect('submit_success')
     else:
         form = TestimonialForm()
-    return render(request, 'testimonials/submit_testimonial.html', {'form': form})
+    return render(request, 'testimonials/submit_testimonial.html', 
+                    {'form': form})
+
 
 def submit_success(request):
     return render(request, 'testimonials/submit_success.html')
