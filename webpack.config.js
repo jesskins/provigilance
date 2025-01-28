@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development', // Set the mode to development or production
-    entry: './static/scripts.js', // Entry point
+    mode: 'production',
+    entry: './static/js/scripts.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'static') // Output directory
+        path: path.resolve(__dirname, 'static/js')
     },
     module: {
         rules: [
@@ -28,6 +28,5 @@ module.exports = {
             "os": false
         }
     },
-devtool: 'source-map'
-
+    devtool: 'source-map' // Use 'source-map' for better debugging
 };
