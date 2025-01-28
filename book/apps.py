@@ -6,4 +6,4 @@ class BookConfig(AppConfig):
     name = 'book'
 
     def ready(self):
-        import book.signals  # Import signals to ensure they are registered
+        import book.signals  
