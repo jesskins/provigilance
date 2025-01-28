@@ -26,7 +26,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-jesskins-provigilance-b85n2n4cy2b.ws.codeinstitute-ide.net',
