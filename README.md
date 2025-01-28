@@ -1,17 +1,15 @@
 <a id="readme-top"></a>
 
-<!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]](https://github.com/jesskins/provigilance/graphs/contributors)
 [![Issues][issues-shield]](https://github.com/jesskins/provigilance/issues)
 [![License][license-shield]](https://github.com/jesskins/provigilance/blob/main/license.txt)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/jessbhowkins)
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/your_username/provigilance">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+<!-- Shields.io badge definitions -->
+[contributors-shield]: https://img.shields.io/github/contributors/jesskins/provigilance.svg
+[issues-shield]: https://img.shields.io/github/issues/jesskins/provigilance.svg
+[license-shield]: https://img.shields.io/github/license/jesskins/provigilance.svg
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-blue
 
   <h3 align="center">Provigilance</h3>
 
@@ -19,14 +17,6 @@
     A webpage for the pre-existing buisness, to enhance business aquesition and promote new client sign-ups. 
     <br />
     <a href="https://github.com/jesskins/provigilance"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/your_username/provigilance">View Demo - if time set up </a>
-    &middot;
-    <a href="https://github.com/your_username/provigilance/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    &middot;
-    <a href="https://github.com/your_username/provigilance/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
 </div>
 
 
