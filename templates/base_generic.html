@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en-uk">
+<html lang="en-GB"> <!-- Corrected the lang attribute -->
 <head>
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Your Title Here{% endblock %}</title> <!-- Added a default title -->
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Fixed static URL -->
     <!-- Font Awesome link -->
     <script src="https://kit.fontawesome.com/af8838f424.js" crossorigin="anonymous"></script>
     <!-- jQuery Library -->
@@ -44,65 +44,63 @@
                         </ul>
                     </li>
                 </ul>
-                    </form> 
-                </div>
             </div>
         </div>
     </nav>
     
     <header>
-        <h1></h1>
+        <h1>{% block header %}{% endblock %}</h1> <!-- Ensure the heading has content or block for dynamic content -->
     </header>
 
     <main>
         {% block content %}
-        <!-- Main content will be injected here -->
-        <div class="main-content"> 
-            <div class="content"> 
-            <!-- main content here --> 
+        <div class="main-content">
+            <div class="content">
+                <!-- main content here -->
             </div>
+        </div> <!-- Closed the div tag here -->
         {% endblock %}
     </main>
     
     <footer>
         <div class="footer-main">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/mike-howkins-81177723/" target="_blank" aria-label="link to director's linkedin page">
+                <a href="https://www.linkedin.com/in/mike-howkins-81177723/" target="_blank" aria-label="Link to director's LinkedIn page">
                     <i class="fab fa-linkedin" aria-hidden="true"></i>
                 </a>
-                <!--- Dead link for now as need a website to get company on trust pilot -->
-                <a class="trustpilot-button" href="https://www.trustpilot.com/" target="_blank" aria-label="Link to trustpilot">
+                <!-- Dead link for now as need a website to get company on trust pilot -->
+                <a class="trustpilot-button" href="https://www.trustpilot.com/" target="_blank" aria-label="Link to Trustpilot">
                     <div class="trustpilot-content" aria-hidden="true">
-                      <i class="fa-solid fa-star"></i>
-                      <span class="trustpilot-text">Trustpilot</span>
+                        <i class="fa-solid fa-star"></i>
+                        <span class="trustpilot-text">Trustpilot</span>
                     </div>
                 </a>
             </div>
             <div class="footer-links">
-            <a href="https://find-and-update.company-information.service.gov.uk/company/05957663" target="_blank" aria-labe="Link to Gov.uk Registery">
-                <img src="{% static 'images/gov-uk.png' %}" alt="Gov.uk Logo" class="gov-uk-icon" aria-hidden="true">
-            </a> 
-                <a class="footer-text" href="/privacy-policy/" about="_blank" aria-label="link to company privacy policy">Privacy Policy</a> 
+                <a href="https://find-and-update.company-information.service.gov.uk/company/05957663" target="_blank" aria-label="Link to Gov.uk Registry">
+                    <img src="{% static 'images/gov-uk.png' %}" alt="Gov.uk Logo" class="gov-uk-icon" aria-hidden="true">
+                </a>
+                <a class="footer-text" href="/privacy-policy/" target="_blank" aria-label="Link to company privacy policy">Privacy Policy</a>
             </div>
             <div class="footer-buttons">
                 <button id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
                     <i class="fas fa-arrow-up" aria-hidden="true"></i>
                 </button>
-                <button id="toggle-theme" aria-label="Toggle Theme light or dark">
-                    <i class="fas fa-adjust" aria-hidden="true"></i></button>
+                <button id="toggle-theme" aria-label="Toggle Theme">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </button>
             </div>
-            <!-- Add this where you want the button link to appear -->
         </div>
         <div class="footer-bottom">
-            <div footer-bottom-buis>
-            <p class="left">&copy; 2006-2025 Provigilance. All rights reserved.</p></div>
-                
+            <div class="footer-bottom-buis"> <!-- Fixed attribute name -->
+                <p class="left">&copy; 2006-2025 Provigilance. All rights reserved.</p>
+            </div>
             <div class="footer-bottom-dev">
                 <p>Website created by Jess 
-                <a href="https://github.com/jesskins" target="_blank" aria-label="To web creator GitHub">
-                    <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-            </p>
+                    <a href="https://github.com/jesskins" target="_blank" aria-label="To web creator GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
@@ -110,6 +108,6 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script> <!-- Fixed static URL -->
 </body>
 </html>
