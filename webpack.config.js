@@ -27,5 +27,7 @@ module.exports = {
             "path": false,
             "os": false
         }
-    }
+    },
+devtool: 'source-map'
+
 };
