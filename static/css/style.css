@@ -19,6 +19,11 @@ header {
     border-bottom: 1px solid #e5e5e5;
 }
 
+.dynamic-header {
+    display: none;
+}
+
+
 /* Main content styles */
 main {
     padding: 20px;
