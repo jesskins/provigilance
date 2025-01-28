@@ -290,17 +290,18 @@ Provide links to validation tools used.
 
 #### Python
 - **Linting and Formatting:**
-  - Tools used: flake8, black
-  - Command: `flake8 . && black .`
+  - Tools used: pycodestyle
+  - Command: `pycodestyle`
   - The installable pyhton tool [pycodestyle](https://pypi.org/project/pycodestyle/) (previously called pep8) was used to validate the python code in the terminal during development. Please see the example screen shot below. This was recommended from [this source](https://www.reddit.com/r/learnpython/comments/3riq4k/tool_for_checking_if_your_code_is/). Errors where ammended, I decided to keep lines below the recommended 79 characters to help to manage multiple tabs open, any errors which I did not understand I used copilot to explain in plain English, or searched the error on [stack overflow](https://stackoverflow.com/questions/53158284/python-giving-a-e501-line-too-long-error). 
   [!pycodestyle python linting](assets/readme/images/pycodestyleex.png)
 
 
 #### JavaScript
 - **Linting and Formatting:**
-  - Tools used: ESLint, Prettier
-  - Command: `eslint . && prettier --write .`
-  - ![JavaScript Linting Screenshot](path/to/javascript-linting-screenshot.png)
+  - Tools used: [JSHint](https://jshint.com/)
+  - Web Tool used.
+  - ![JavaScript JSHint Screenshot](assets/readme/jshint_scriptjs.png)
+  I copied over all relevant JavaScript files to JSHint to check for any errors. All errors were amended. Unfortunately, in bundle.js there were several warnings present (20 to be exact). Due to time constraints, and minimal affect to functionality these were left for a future bug fix.
 
 ### Design Elements
 
