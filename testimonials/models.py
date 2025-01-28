@@ -11,8 +11,8 @@ class Testimonial(models.Model):
     company = models.CharField(max_length=200, blank=True, null=True)
     role = models.CharField(max_length=100, blank=True, null=True)
     text = models.TextField()
-    image = models.ImageField(upload_to='testimonials/images', \
-            blank=True, null=True)
+    image = models.ImageField(
+        upload_to='testimonials/images', blank=True, null=True)
     approved = models.BooleanField(default=False)
     service_month = models.CharField(max_length=20, blank=True, null=True)
     recommend = models.CharField(max_length=3, choices=RECOMMEND_CHOICES)

@@ -8,8 +8,10 @@ import os
 
 def index(request):
     testimonials = Testimonial.objects.filter(approved=True)
-    return render(request, 'testimonials/testimonials_list.html',
-                {'testimonials': testimonials})
+    return render(
+        request,
+        'testimonials/testimonials_list.html',
+        {'testimonials': testimonials})
 
 
 def testimonials_list(request):
@@ -29,14 +31,17 @@ def submit_testimonial(request):
             print(f"Email: {recipient_email}, Name: {recipient_name}")
 
             # Call the send_email.py script with the recipient's email and name
-            script_path = os.path.join(os.path.dirname(__file__), 'send_email.py')
-            subprocess.call(['python', script_path, recipient_email, recipient_name])
+            script_path = os.path.join(
+                os.path.dirname(__file__), 'send_email.py')
+            subprocess.call([
+                'python', script_path, recipient_email, recipient_name])
 
             return redirect('submit_success')
     else:
         form = TestimonialForm()
-    return render(request, 'testimonials/submit_testimonial.html', 
-                    {'form': form})
+    return render(
+        request, 'testimonials/submit_testimonial.html',
+        {'form': form})
 
 
 def submit_success(request):

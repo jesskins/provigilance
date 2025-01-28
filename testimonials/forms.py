@@ -34,16 +34,29 @@ class TestimonialForm(forms.ModelForm):
     class Meta:
         model = Testimonial
         fields = [
-            'name', 'email', 'company', 'role', 'text', 
+            'name', 'email', 'company', 'role', 'text',
             'image', 'service_month', 'service_year', 'recommend'
         ]
-        widgets = { 
-            'name': forms.TextInput(attrs={'placeholder': 'Enter your name'}), 
-            'email': forms.EmailInput(attrs={'placeholder': 'Enter your email'}), 
-            'company': forms.TextInput(attrs={'placeholder': 'Enter your company name, or the company you represent'}), 
-            'role': forms.TextInput(attrs={'placeholder': 'Enter your job role'}), 
-            'text': forms.Textarea(attrs={'placeholder': 'Write your testimonial here...'}), 
-            'image': forms.ClearableFileInput(attrs={'placeholder': 'Optional: Upload an image'}), 
-            'service_month': forms.Select(attrs={'placeholder': 'In which month did you access our service?'}), 
-            'service_year': forms.Select(attrs={'placeholder': 'And, in which year?'}), 
+        widgets = {
+            'name': forms.TextInput(
+                attrs={'placeholder': 'Enter your name'}),
+            'email': forms.EmailInput(
+                attrs={'placeholder': 'Enter your email'}),
+            'company': forms.TextInput(
+                attrs={
+                    'placeholder': 'Enter your company name,'
+                    'or the company you represent'
+                    }),
+            'role': forms.TextInput(
+                attrs={'placeholder': 'Enter your job role'}),
+            'text': forms.Textarea(
+                attrs={'placeholder': 'Write your testimonial here...'}),
+            'image': forms.ClearableFileInput(
+                attrs={'placeholder': 'Optional: Upload an image'}),
+            'service_month': forms.Select(
+                attrs={
+                    'placeholder': 'In which month did you access our service?'
+                    }),
+            'service_year': forms.Select(
+                attrs={'placeholder': 'And, in which year?'}),
         }
