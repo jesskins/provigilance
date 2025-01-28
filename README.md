@@ -80,9 +80,6 @@ We'll keep adding more features to meet your evolving needs. Feel free to sugges
 
 ### Built With
 
-This section lists the major frameworks/libraries used to build Provigilance. Here are a few examples:
-### Built With
-
 This section lists the major frameworks/libraries used to build Provigilance:
 
 * [![Django][Django]](https://www.djangoproject.com/) - A high-level Python web framework
@@ -132,34 +129,6 @@ _Below is an example of how you can instruct your audience on installing and set
    git remote set-url origin github_username/repo_name
    git remote -v # confirm the changes
    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -386,3 +355,12 @@ Sources etc:
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+<!-- MARKDOWN LINKS & IMAGES -->
+[Django]: https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white
+[Django-OAuth-Toolkit]: https://img.shields.io/badge/Django%20OAuth%20Toolkit-092E20?style=for-the-badge
+[Gunicorn]: https://img.shields.io/badge/Gunicorn-499848?style=for-the-badge&logo=gunicorn&logoColor=white
+[Pillow]: https://img.shields.io/badge/Pillow-499848?style=for-the-badge&logo=pillow&logoColor=white
+[psycopg2]: https://img.shields.io/badge/psycopg2-336791?style=for-the-badge
+[python-dotenv]: https://img.shields.io/badge/python--dotenv-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[Whitenoise]: https://img.shields.io/badge/Whitenoise-003C7E?style=for-the-badge
+[Google-Auth]: https://img.shields.io/badge/Google%20Auth-4285F4?style=for-the-badge&logo=google&logoColor=white
