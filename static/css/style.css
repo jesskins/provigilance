@@ -2,6 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin-top: 70px; /* Adjust this value if you change the height of the fixed navbar */
+    background-color: #ffffff;
 }
 
 html, body {
@@ -21,7 +22,6 @@ header {
 /* Main content styles */
 main {
     padding: 20px;
-    background-color: #ffffff;
 }
 
 /* To ensure no overlay of footer */
@@ -38,7 +38,7 @@ main {
 
 /* Custom navbar styles */
 .navbar {
-    background-color: #696d7d;
+    background-color: #3f3f3f;
 }
 
 .navbar .navbar-brand {
@@ -59,7 +59,7 @@ main {
 
 /* Offcanvas styles */
 .offcanvas-header {
-    background-color: #696d7d;
+    background-color: #3f3f3f ;
     color: #ffffff;
 }
 
@@ -78,13 +78,38 @@ main {
     font-size: 110%;
 }
 
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF); /* Sleeker color scheme */
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.hero-banner h1 {
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 0;
+}
+
+section.bg-light {
+    background-color: #f8f9fa;
+}
+
 /* Footer styles */
 .footer-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #696d7d;
+    background-color: #3f3f3f;
     text-align: center;
     width: 100%;
 }
@@ -123,39 +148,40 @@ main {
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s, color 0.3s; /* Transition effects */
     flex-direction: column; /* Stack content vertically */
-  }
-  .trustpilot-button:hover {
+}
+
+.trustpilot-button:hover {
     color: #006ADB; /* Text and icon color on hover */
-  }
-  .trustpilot-content {
+}
+
+.trustpilot-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center; /* Center text */
-  }
-  .trustpilot-button .fa-star {
+}
+
+.trustpilot-button .fa-star {
     font-size: 20px; /* Larger star */
     margin-bottom: 5px;
     color: inherit; /* Inherit color */
-  }
-  .trustpilot-button .trustpilot-text {
+}
+
+.trustpilot-button .trustpilot-text {
     font-size: 10px; /* Consistent text size */
     font-family: 'Trustpilot', sans-serif; /* Use Trustpilot brand font */
     color: inherit; /* Inherit color */
-  }
-
-  .footer-links a img {
-    width: 26px; 
-    height: auto;
-    filter: invert(100%);  /* color to white */
-    margin-right: 5px;
-    vertical-align: middle;  
 }
 
-/* cannot get image responsive due to image type, not worth the hassle rn */
+.footer-links a img {
+    width: 24px;  /* Adjust the size to match the LinkedIn logo */
+    height: auto;
+    filter: invert(100%);  /* Change the color to white */
+    margin-left: 10px;  /* Add some space between the icons */
+    vertical-align: middle;  /* Align the icon vertically with the text */
+}
 
-  
-
+/* Footer buttons */
 .footer-buttons {
     display: flex;
     align-items: center;
@@ -300,8 +326,7 @@ body.dark-mode .footer-content {
     background: #2C3E50;
 }
 
-
-/* FORMS.PY CSS STYLING */
+/* FORMS CSS STYLING */
 
 /* Center the form and style the container */
 .form-container {
@@ -309,8 +334,8 @@ body.dark-mode .footer-content {
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Form styles */
@@ -335,22 +360,22 @@ input, select, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-bottom: 10px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #4CA1AF;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #2C3E50;
 }
 
 /* Validation styles */
@@ -372,21 +397,15 @@ input:invalid, select:invalid, textarea:invalid {
 
 #clear-form {
     background-color: transparent;
-    color: #007bff;
+    color: #4CA1AF;
     font-size: 24px;
     padding: 10px;
     border: none;
     cursor: pointer;
-    font-weight: normal; /* Ensure default weight is normal */
 }
 
 #clear-form:hover {
-    color: #0056b3;
-}
-
-#clear-form.clicked {
-    font-weight: bold;
-    color: #003366; /* Darker color */
+    color: #2C3E50;
 }
 
 /* Radio buttons for the recommendation question */
@@ -400,15 +419,16 @@ input:invalid, select:invalid, textarea:invalid {
     margin-right: 5px;
 }
 
-
-/* PRIVACY POLICY STUFF */
-/* Privacy Policy Styles */
+/* PRIVACY POLICY STYLING */
 .privacy-policy {
     font-size: 14px; /* Small text size */
     line-height: 1.6; /* Good line spacing for readability */
     margin: 20px auto; /* Center the content */
     max-width: 800px; /* Limit the width for better readability */
     padding: 20px; /* Add padding */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .privacy-policy h1, 
@@ -432,91 +452,7 @@ input:invalid, select:invalid, textarea:invalid {
     margin-bottom: 10px; /* Add spacing between list items */
 }
 
-
-/* testimonial list section styling */
-
-/* Hero Banner */
-.hero-banner {
-    background: linear-gradient(135deg, #2C3E50, #4CA1AF); /* Sleeker color scheme */
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-    position: relative;
-}
-
-.hero-banner h1 {
-    font-size: 3em;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Introductory Text */
-.intro-text {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 1.2em;
-    color: #333;
-}
-
-/* Testimonials Container */
-.testimonials {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* Testimonial */
-.testimonial {
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    margin: 20px;
-    max-width: 600px;
-    padding: 20px;
-}
-
-.testimonial.reverse {
-    flex-direction: row-reverse;
-}
-
-.testimonial-img {
-    border-radius: 50%;
-    height: 100px;
-    margin-right: 20px;
-    width: 100px;
-}
-
-.testimonial-content {
-    flex: 1;
-}
-
-.testimonial h3 {
-    margin-top: 0;
-    font-size: 1.2em;
-}
-
-/* Submit Your Own */
-.submit-your-own {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.submit-your-own a {
-    background: #4CA1AF;
-    border-radius: 5px;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-.submit-your-own a:hover {
-    background: #2C3E50;
-}
-
+/* Testimonial Styles */
 
 /* General styles for the testimonials section */
 .testimonials {
@@ -524,73 +460,67 @@ input:invalid, select:invalid, textarea:invalid {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-  }
-  
-  .testimonial {
+}
+
+.testimonial {
     display: flex;
     align-items: center;
     width: 80%;
     padding: 20px;
     background-color: #f8f9fa;
-    width: 80%; /* Ensuring larger width */
     max-width: 800px; /* Keeping a maximum width for large screens */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-  }
-  
-  .reverse {
+}
+
+.reverse {
     flex-direction: row-reverse;
-  }
-  
-  .testimonial-img {
+}
+
+.testimonial-img {
     border-radius: 50%;
     width: 80px;
     height: 80px;
     margin-right: 20px;
-  }
-  
-  .reverse .testimonial-img {
+}
+
+.reverse .testimonial-img {
     margin-left: 20px;
     margin-right: 0;
-  }
-  
-  .testimonial-content {
+}
+
+.testimonial-content {
     flex: 1;
-  }
-  
-  .testimonial-content h3 {
+}
+
+.testimonial-content h3 {
     margin: 0;
     font-size: 18px;
     color: #333;
-  }
-  
-  .testimonial-content p {
+}
+
+.testimonial-content p {
     margin: 10px 0;
     font-size: 14px;
     color: #666;
-  }
-  
-  .recommendation {
+}
+
+.recommendation {
     color: green;
     font-weight: bold;
     margin-top: 10px;
-  }
-  
-  .arrow {
+}
+
+.arrow {
     cursor: pointer;
     color: #555;
     font-size: 24px;
     text-align: center;
-  }
-  
-
-
+}
 
 
 /* submit success css to follow - wanted more of a bright and simple design */
-
-/* Add this to your CSS file (e.g., style.css) */
 
 /* Gratitude Banner */
 .gratitude-banner {
@@ -621,4 +551,98 @@ input:invalid, select:invalid, textarea:invalid {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Booking Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    border-bottom: 5px solid #f9f9f9;
+}
+
+.hero-banner h1 {
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Calendar Section */
+.calendar-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#calendar {
+    margin: 0 auto;  /* Centering the calendar horizontally */
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;  /* Added flex display */
+    justify-content: center;  /* Center content horizontally */
+}
+
+
+/* Booking Form Section */
+.booking-form {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CA1AF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2C3E50;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.text-center {
+    text-align: center;
+}
+
 
