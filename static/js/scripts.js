@@ -1,19 +1,27 @@
-// Ensure the document is ready
 $(document).ready(function() {
     // Initialize jQuery UI Datepicker on the calendar element
     $("#calendar").datepicker({
         // Customize the datepicker options if needed
     });
 
-    // Function to toggle search bar visibility
-    function toggleSearch() {
-        const searchBar = document.getElementById('searchBar');
-        if (searchBar.style.display === 'none' || searchBar.style.display === '') {
-            searchBar.style.display = 'block';
-        } else {
-            searchBar.style.display = 'none';
-        }
+ // Function to toggle search bar visibility
+function toggleSearch() {
+    const searchBar = document.getElementById('searchBar');
+    if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+        searchBar.style.display = 'block';
+    } else {
+        searchBar.style.display = 'none';
     }
+}
+
+// Ensure the DOM is fully loaded before adding the event listener
+document.addEventListener('DOMContentLoaded', (event) => {
+    const toggleButton = document.getElementById('searchIcon');
+    if (toggleButton) {
+        toggleButton.addEventListener('click', toggleSearch);
+    }
+});
+
 
     // Function to handle the request call back button
     function requestCallBack() {
