@@ -247,6 +247,11 @@ Therefore, a "middle-man" software, [Brevo ("SendinBlue")](https://www.brevo.com
 In the future, I would intend to remove this service and directly manage this function, once the website is up and running, and able to meet the privacy/secutiry measures. 
 
 
+#### CRUD Functionality 
+
+The Django Admin interface was implemented to meet requirements to add, edit, delete and read submitted testimonials and booking requests. 
+
+
 ## Testing and Validation 
 
 ### Automated Tests
@@ -287,7 +292,9 @@ Provide links to validation tools used.
 - **Linting and Formatting:**
   - Tools used: flake8, black
   - Command: `flake8 . && black .`
-  - ![Python Linting Screenshot](path/to/python-linting-screenshot.png)
+  - The installable pyhton tool [pycodestyle](https://pypi.org/project/pycodestyle/) (previously called pep8) was used to validate the python code in the terminal during development. Please see the example screen shot below. This was recommended from [this source](https://www.reddit.com/r/learnpython/comments/3riq4k/tool_for_checking_if_your_code_is/). Errors where ammended, I decided to keep lines below the recommended 79 characters to help to manage multiple tabs open, any errors which I did not understand I used copilot to explain in plain English, or searched the error on [stack overflow](https://stackoverflow.com/questions/53158284/python-giving-a-e501-line-too-long-error). 
+  [!pycodestyle python linting](assets/readme/images/pycodestyleex.png)
+
 
 #### JavaScript
 - **Linting and Formatting:**
