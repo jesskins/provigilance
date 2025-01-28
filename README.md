@@ -63,14 +63,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Link to the project:
 
-Provigilance is designed to provide top-notch security for your data. Our application offers comprehensive monitoring and alerting features to keep your information safe. Here's why Provigilance stands out:
-* Focuses on providing exceptional data security.
-* Easy to set up and use, so you can focus on what matters.
-* Continuously updated to address the latest security threats.
-
-We'll keep adding more features to meet your evolving needs. Feel free to suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all contributors!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
