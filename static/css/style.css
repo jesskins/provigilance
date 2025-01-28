@@ -143,6 +143,17 @@ main {
     font-family: 'Trustpilot', sans-serif; /* Use Trustpilot brand font */
     color: inherit; /* Inherit color */
   }
+
+  .footer-links a img {
+    width: 26px; 
+    height: auto;
+    filter: invert(100%);  /* color to white */
+    margin-right: 5px;
+    vertical-align: middle;  
+}
+
+/* cannot get image responsive due to image type, not worth the hassle rn */
+
   
 
 .footer-buttons {

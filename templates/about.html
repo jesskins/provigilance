@@ -1,4 +1,5 @@
 {% extends 'base_generic.html' %}
+{% load static %}
 
 {% block title %}
 Provigilance - About Us
@@ -24,7 +25,6 @@ Provigilance - About Us
         <h2>What Our Customers Say</h2>
         <p>Read what our satisfied customers have to say about us or submit your own testimonial.</p>
         <a href="{% url 'testimonials' %}" class="btn btn-primary">View Testimonials</a>
-        <a href="{% url 'book' %}" class="btn btn-secondary">Submit Booking Request</a>
     </div>
 </section>
 
@@ -45,6 +45,31 @@ Provigilance - About Us
             <li>Innovation</li>
             <li>Teamwork</li>
         </ul>
+        <h3>Our Expertise</h3>
+        <p>
+            PROVIGILANCE® Limited, established in October 2006, provides comprehensive Pharmacovigilance (PV) and Quality Assurance (QA) services. Our experience includes over 250 audits conducted to date within the GVP, GCP, and CSV areas. We specialize in:
+        </p>
+        <ul>
+            <li>Regulatory Inspection preparation and support</li>
+            <li>Mock system inspections and interview coaching</li>
+            <li>PV system audits and documentation reviews</li>
+            <li>Qualification and due diligence audits</li>
+            <li>PV Process audits</li>
+            <li>GCP audits and inspection preparation</li>
+            <li>Quality assurance system reviews and audits</li>
+            <li>Inspection training of employees</li>
+            <li>Gap analysis and (CAPA) plan generation/review</li>
+            <li>SOP generation and system improvement activities</li>
+            <li>Audit report meta-analysis</li>
+            <li>Data reviews and reconciliation activities</li>
+            <li>Safety Data Exchange Agreement (SDEA) and regulatory document generation and reviews</li>
+        </ul>
+    </div>
+</section>
+
+<section class="call-to-action py-5 bg-light">
+    <div class="container text-center">
+        <a href="{% url 'book' %}" class="btn btn-secondary">Submit Booking Request</a>
     </div>
 </section>
 
@@ -54,17 +79,38 @@ Provigilance - About Us
         <h2>Who We Are</h2>
         <p>Meet our dedicated team of professionals and learn about their experience.</p>
         <div class="row">
-            <!-- Example Staff Member -->
             <div class="col-md-4">
                 <div class="card">
-                    <img src="{% static 'images/staff1.jpg' %}" class="card-img-top" alt="Staff Member">
+                    <img src="{% static 'images/mike-howkins.jpg' %}" class="card-img-top" alt="Mike Howkins">
                     <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">John is an experienced professional with over 10 years in the industry.</p>
+                        <h5 class="card-title">Mike Howkins, R.G.N., Pg Dip, MRQA</h5>
+                        <p class="card-text">
+                            <strong>SUMMARY</strong><br>
+                            Since moving from the healthcare sector into the pharmaceutical industry in 1995, Mike has acquired a broad range of experience in PV and Risk Management, holding a variety of senior management roles, including as EEA Qualified Person for Pharmacovigilance (QPPV). He has been an independent PVQA consultant since July 2006, founding PROVIGILANCE® Limited in October 2006.<br><br>
+
+                            <strong>AUDITING EXPERIENCE</strong><br>
+                            Over 250 audits conducted to date within the GVP, GCP, and CSV areas.<br><br>
+
+                            <strong>THERAPY AREA EXPERIENCE</strong><br>
+                            Over 25 years of industry experience, including work in all therapeutic areas and medical devices.<br><br>
+
+                            <strong>COUNTRIES AUDITED IN</strong><br>
+                            Over 50 countries worldwide, including Albania, Australia, Brazil, Canada, China, France, Germany, Japan, UK, USA, and many more.<br><br>
+
+                            <strong>LANGUAGE EXPERIENCE</strong><br>
+                            English (native), French (conversational), Spanish (basic), German (basic).<br><br>
+
+                            <strong>OTHER QA/QMS EXPERTISE</strong><br>
+                            Mike has been engaged in leading and supporting a variety of PV and QA projects for international pharmaceutical companies, CROs, and other service providers, including regulatory inspection preparation, mock inspections, system audits, gap analysis, SOP generation, and more.<br><br>
+
+                            <strong>PROFESSIONAL EXPERIENCE</strong><br>
+                            <em>Provigilance Ltd., Salisbury, UK (2006 – Present)</em><br>
+                            Managing Director and Lead Consultant<br>
+                        </p>
                     </div>
                 </div>
             </div>
-            <!-- Add more staff members as needed -->
+            <!-- any other staff to follow, will leave for now for data bc i can breach my dad's data but not really anyone else's -->
         </div>
     </div>
 </section>
